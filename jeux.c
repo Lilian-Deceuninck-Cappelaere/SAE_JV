@@ -6,7 +6,7 @@ void readLine(const char *fileName, int lineNumber)
 {
     FILE *file = fopen(fileName, "r");
 
-    char buffer[256];
+    char buffer[1000];
     int currentLine = 1;
 
     while (fgets(buffer, sizeof(buffer), file) != NULL)
@@ -24,10 +24,10 @@ void readLine(const char *fileName, int lineNumber)
     fclose(file);
 }
 
-int main(int argc, char *argv[])
-{
-    char language[3], fileName[20];
 
+
+char select_language(char *language)
+{
     printf("Choisir la langue (fr) / Select language (en) : ");
     scanf("%s", language);
 
@@ -41,12 +41,23 @@ int main(int argc, char *argv[])
         printf("Game in EN\n");
     }
 
+    return *language;
+}
+
+char intro(char *fileName)
+{
+    readLine(fileName, 1);
+}
+
+int main(int argc, char *argv[])
+{
+    char language[3], fileName[20];
+
+    select_language(language);
+
     snprintf(fileName, sizeof(fileName), "intro_%s.txt", language);
 
-    int lineNumber = 2; // The line number you want to read
-
-    readLine(fileName, lineNumber);
-
+    intro(fileName);
 
     return 0;
 }
