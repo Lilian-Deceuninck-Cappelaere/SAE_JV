@@ -1,9 +1,18 @@
 /*Deceuninck Cappelaere Lilian et Molinaro Antoine*/
 
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/stat.h>
+
+typedef struct
+{
+    char name;
+    int pv;
+    char gender;
+    int attaque;
+        
+} character;
+
 
 void readLine(const char *fileName, int lineNumber)
 /*Read the line number lineNumber*/
@@ -29,7 +38,6 @@ void readLine(const char *fileName, int lineNumber)
 }
 
 
-
 char select_language(char *language)
 /*Choose the language of the game*/
 {
@@ -52,27 +60,26 @@ char select_language(char *language)
             ok = 1;
         }
     } while (ok == 0);
-    
-    
 
     return *language;
 }
 
-void intro(char *fileName, char *name, char *gender)
+void intro(char *fileName, character *player)
 /*Introduction of the game*/
 {
     readLine(fileName, 1);
     printf("\n");
     readLine(fileName, 5);
-    scanf("%s", name);
+    scanf("%s", player->name);
     readLine(fileName, 7);
-    scanf("%s", gender);
+    scanf("%s", player->gender);
 }
 
 int main(int argc, char *argv[])
 {
     char language[3], fileName[20], name[15], gender[6];
     int end;
+    character player; 
     end = 0;
 
     while (end == 0)
@@ -81,7 +88,7 @@ int main(int argc, char *argv[])
 
         snprintf(fileName, sizeof(fileName), "intro_%s.txt", language);
 
-        intro(fileName, name, gender);
+        intro(fileName, *player);
     }
     
     return 0;
