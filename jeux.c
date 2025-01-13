@@ -3,6 +3,7 @@
 #include <sys/stat.h>
 
 void readLine(const char *fileName, int lineNumber)
+/*Read the line number lineNumber*/
 {
     FILE *file = fopen(fileName, "r");
 
@@ -13,7 +14,7 @@ void readLine(const char *fileName, int lineNumber)
     {
         if (currentLine == lineNumber)
         {
-            printf("Line %d: %s", lineNumber, buffer);
+            printf("%s", buffer);
             fclose(file);
             return;
         }
@@ -27,6 +28,7 @@ void readLine(const char *fileName, int lineNumber)
 
 
 char select_language(char *language)
+/*Choose the language of the game*/
 {
     printf("Choisir la langue (fr) / Select language (en) : ");
     scanf("%s", language);
@@ -44,7 +46,8 @@ char select_language(char *language)
     return *language;
 }
 
-char intro(char *fileName)
+void intro(char *fileName)
+/*Introduction of the game*/
 {
     readLine(fileName, 1);
 }
@@ -52,12 +55,21 @@ char intro(char *fileName)
 int main(int argc, char *argv[])
 {
     char language[3], fileName[20];
+    int end;
+    end = 0;
 
     select_language(language);
 
-    snprintf(fileName, sizeof(fileName), "intro_%s.txt", language);
+    while (end == 0)
+    {
+        
 
-    intro(fileName);
+        snprintf(fileName, sizeof(fileName), "intro_%s.txt", language);
+
+        intro(fileName);
+    }
+    
+    
 
     return 0;
 }
