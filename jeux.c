@@ -46,15 +46,18 @@ char select_language(char *language)
     return *language;
 }
 
-void intro(char *fileName)
+void intro(char *fileName, char *name)
 /*Introduction of the game*/
 {
     readLine(fileName, 1);
+    printf("\n");
+    readLine(fileName, 5);
+    scanf("%s", name);
 }
 
 int main(int argc, char *argv[])
 {
-    char language[3], fileName[20];
+    char language[3], fileName[20], name[15];
     int end;
     end = 0;
 
@@ -63,9 +66,10 @@ int main(int argc, char *argv[])
     while (end == 0)
     {
         select_language(language);
+
         snprintf(fileName, sizeof(fileName), "intro_%s.txt", language);
 
-        intro(fileName);
+        intro(fileName, name);
     }
     
     
