@@ -1,3 +1,6 @@
+/*Deceuninck Cappelaere Lilian et Molinaro Antoine*/
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/stat.h>
@@ -55,22 +58,22 @@ char select_language(char *language)
     return *language;
 }
 
-void intro(char *fileName, char *name)
+void intro(char *fileName, char *name, char *gender)
 /*Introduction of the game*/
 {
     readLine(fileName, 1);
     printf("\n");
     readLine(fileName, 5);
     scanf("%s", name);
+    readLine(fileName, 7);
+    scanf("%s", gender);
 }
 
 int main(int argc, char *argv[])
 {
-    char language[3], fileName[20], name[15];
+    char language[3], fileName[20], name[15], gender[6];
     int end;
     end = 0;
-
-    
 
     while (end == 0)
     {
@@ -78,10 +81,8 @@ int main(int argc, char *argv[])
 
         snprintf(fileName, sizeof(fileName), "intro_%s.txt", language);
 
-        intro(fileName, name);
+        intro(fileName, name, gender);
     }
     
-    
-
     return 0;
 }
