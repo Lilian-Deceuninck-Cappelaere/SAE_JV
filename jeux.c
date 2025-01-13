@@ -35,12 +35,12 @@ char select_language(char *language)
 
     if (strcmp(language, "fr") == 0)
     {
-        printf("Jeux en français\n");
+        printf("Jeux en Français\n");
     }
 
     else if (strcmp(language, "en") == 0)
     {
-        printf("Game in EN\n");
+        printf("Game in English\n");
     }
 
     return *language;
