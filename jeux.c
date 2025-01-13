@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <sys/stat.h>
 
-const char *filename = "intro_en.txt";
+const char *filename = "intro_%c.txt";
 
 int main(int argc, char *argv[])
 {
