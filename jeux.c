@@ -58,12 +58,11 @@ int main(int argc, char *argv[])
     int end;
     end = 0;
 
-    select_language(language);
+    
 
     while (end == 0)
     {
-        
-
+        select_language(language);
         snprintf(fileName, sizeof(fileName), "intro_%s.txt", language);
 
         intro(fileName);
