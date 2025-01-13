@@ -30,18 +30,27 @@ void readLine(const char *fileName, int lineNumber)
 char select_language(char *language)
 /*Choose the language of the game*/
 {
-    printf("Choisir la langue (fr) / Select language (en) : ");
-    scanf("%s", language);
-
-    if (strcmp(language, "fr") == 0)
+    int ok;  /*Boolean for check the language*/
+    ok = 0;
+    do
     {
-        printf("Jeux en Français\n");
-    }
+        printf("Choisir la langue (fr) / Select language (en) : ");
+        scanf("%s", language);
 
-    else if (strcmp(language, "en") == 0)
-    {
-        printf("Game in English\n");
-    }
+        if (strcmp(language, "fr") == 0)
+        {
+            printf("****Jeux en Français****\n\n");
+            ok = 1;
+        }
+
+        else if (strcmp(language, "en") == 0)
+        {
+            printf("****Game in English****\n");
+            ok = 1;
+        }
+    } while (ok == 0);
+    
+    
 
     return *language;
 }
