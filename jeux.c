@@ -2,45 +2,51 @@
 #include <stdlib.h>
 #include <sys/stat.h>
 
+void readLine(const char *fileName, int lineNumber)
+{
+    FILE *file = fopen(fileName, "r");
 
+    char buffer[256];
+    int currentLine = 1;
+
+    while (fgets(buffer, sizeof(buffer), file) != NULL)
+    {
+        if (currentLine == lineNumber)
+        {
+            printf("Line %d: %s", lineNumber, buffer);
+            fclose(file);
+            return;
+        }
+        currentLine++;
+    }
+
+    printf("Line %d not found in the file.\n", lineNumber);
+    fclose(file);
+}
 
 int main(int argc, char *argv[])
 {
-    char language[1], filename[20];
+    char language[3], fileName[20];
 
     printf("Choisir la langue (fr) / Select language (en) : ");
     scanf("%s", language);
 
-    if (language == "fr")
+    if (strcmp(language, "fr") == 0)
     {
         printf("Jeux en français\n");
     }
 
-    else if (language == "en")
+    else if (strcmp(language, "en") == 0)
     {
         printf("Game in EN\n");
     }
 
-    snprintf(filename, sizeof(filename), "intro_%s.txt", language);
-    // open the file
-    FILE *in_file = fopen(filename, "r");
+    snprintf(fileName, sizeof(fileName), "intro_%s.txt", language);
 
-    // read the file size
-    struct stat sb;
-    stat(filename, &sb);
+    int lineNumber = 2; // The line number you want to read
 
-    // allocation of the character array
-    char *file_contents = malloc(sb.st_size);
+    readLine(fileName, lineNumber);
 
-    // display line by line
-    while (fscanf(in_file, " %[^\n] ", file_contents) != EOF)
-    {
-        printf("> %s\n", file_contents);
-    }
-
-    // close the file
-    fclose(in_file);
-    exit(EXIT_SUCCESS);
 
     return 0;
 }
