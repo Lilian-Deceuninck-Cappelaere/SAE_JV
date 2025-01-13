@@ -1,28 +1,39 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <sys/stat.h>
 
-const char *filename = "présentation.txt";
-
-int main(int argc, char *argv[])
+void lireLigne(const char *nomFichier, int numeroLigne)
 {
-    // open the file
-    FILE *in_file = fopen(filename, "r");
-
-    // read the file size
-    struct stat sb;
-    stat(filename, &sb);
-
-    // allocation of the character array
-    char *file_contents = malloc(sb.st_size);
-
-    // display line by line
-    while (fscanf(in_file, " %[^\n] ", file_contents) != EOF)
+    FILE *fichier = fopen(nomFichier, "r");
+    if (fichier == NULL)
     {
-        printf("> %s\n", file_contents);
+        perror("Erreur d'ouverture du fichier");
+        exit(EXIT_FAILURE);
     }
 
-    // close the file
-    fclose(in_file);
-    exit(EXIT_SUCCESS);
+    char buffer[256];
+    int ligneActuelle = 1;
+
+    while (fgets(buffer, sizeof(buffer), fichier) != NULL)
+    {
+        if (ligneActuelle == numeroLigne)
+        {
+            printf("Ligne %d: %s", numeroLigne, buffer);
+            fclose(fichier);
+            return;
+        }
+        ligneActuelle++;
+    }
+
+    printf("La ligne %d n'a pas été trouvée dans le fichier.\n", numeroLigne);
+    fclose(fichier);
+}
+
+int main()
+{
+    const char *nomFichier = "intro_fr.txt";
+    int numeroLigne = 2; // Numéro de la ligne que vous voulez lire
+
+    lireLigne(nomFichier, numeroLigne);
+
+    return 0;
 }
