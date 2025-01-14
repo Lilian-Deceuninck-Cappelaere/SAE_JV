@@ -52,11 +52,11 @@ void readparagraph(const char *fileName, int lineNumber, int lineEnd)
     char buffer[1000];
     int currentLine = 1;
 
-    while (fgets(buffer, sizeof(buffer), file) != NULL)
+    while (currentLine != lineEnd)
     {
-        if ((currentLine == lineNumber)||(currentLine <= lineEnd)&&(currentLine >= lineNumber))
+        if ((currentLine >= lineNumber)&&(currentLine <= lineEnd))
         {
-            printf("%s", buffer);
+            printf("%s\n", buffer);
             fclose(file);
             return;
         }
