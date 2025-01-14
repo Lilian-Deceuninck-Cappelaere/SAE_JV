@@ -3,6 +3,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/stat.h>
+#include <string.h>
+#include <time.h>
+#include <stdbool.h>
 
 
 typedef struct {
@@ -96,18 +99,52 @@ char select_language(char *language)
     return *language;
 }
 
-void intro(char *fileName, character *player)
-/*Introduction of the game*/
+
+
+int Randomnum(int min, int max)
+/*Random number generator function*/
 {
-    readLine(fileName, 1);
-    printf("\n");
-    readLine(fileName, 5);
-    scanf("%s", &player->name);
-    readLine(fileName, 7);
-    scanf("%s", &player->gender);
-    // player->pv = 100;
-    readLine(fileName, 9);
-    printf("\t%s\n\t%s\n\t%d\n\n", &player->name, &player->gender, &player->pv);
+    return rand() % (max - min + 1) + min;
+}
+
+void guess_the_number(char *fileName)
+{
+    int numbertofind = Randomnum(1, 100), counter, userinputnumber;
+    bool numfound;
+
+    userinputnumber = 0;
+    counter = 10;
+    numfound = false;
+
+    while ((numfound = false) && (counter > 0))
+    {
+        readLine(fileName, 4);
+        scanf("%d", &userinputnumber);
+        if (numbertofind == userinputnumber)
+        {
+            readLine(fileName, 12);
+            numfound = true;
+        }
+        else if (userinputnumber < numbertofind)
+        {
+            readLine(fileName, 6);
+            counter--;
+            readLine(fileName, 10);
+            printf("%d\n", counter);
+        }
+        else
+        {
+            readLine(fileName, 8);
+            counter--;
+            readLine(fileName, 10);
+            printf("%d\n", counter);
+        }
+        
+    }
+    if (counter == 0 && numfound == false)
+    {
+        readLine(fileName, 14);
+    }
 }
 
 void fight(character *player, character *zombie, int end) 
@@ -125,6 +162,27 @@ void fight(character *player, character *zombie, int end)
 
     printf("Player pv : %d\n", player->pv);
     printf("Zombie pv : %d\n", zombie->pv);    
+}
+
+void intro(char *fileName, character *player)
+/*Introduction of the game*/
+{
+    readLine(fileName, 1);
+    printf("\n");
+    readLine(fileName, 5);
+    scanf("%s", &player->name);
+    readLine(fileName, 7);
+    scanf("%s", &player->gender);
+}
+
+void chap1(char *fileName, character *player)
+/*Chapter 1 of story*/
+{
+    printf("\n");
+    readLine(fileName, 1);
+    srand(time(0));
+    printf("\n");
+    guess_the_number(fileName);
 }
 
 
@@ -146,8 +204,8 @@ int main(int argc, char *argv[])
     while (end == 0 && player.pv > 0)
     {
         intro(fileName, &player);
-        snprintf(fileName, sizeof(fileName), "%s/intro.txt", language);
-        readLine(fileName, 11);
+        snprintf(fileName, sizeof(fileName), "%s/chap1.txt", language);
+        chap1(fileName, &player);
         scanf("%d", &action);
         switch (action)
         {

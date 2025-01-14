@@ -1,6 +1,4 @@
-Bonjour, merci d’avoir rejoint l’aventure. Avant de remettre de l’ordre dans l’IUT, vous devez d’abord y entrer. Malheureusement, l’entrée principale est fermée pour une raison inconnue. Vous devez chercher une autre entrée.
-
-Vous venez de trouver une entrée qui semble sure. Néanmoins, il faut déverrouiller la porte pour rentrer. Pour ce faire, vous devrez deviner un nombre entre 1 et 100. Vous avez 10 essais.
+Bonjour, merci d’avoir rejoint l’aventure. Avant de remettre de l’ordre dans l’IUT, vous devez d’abord y entrer. Malheureusement, l’entrée principale est fermée pour une raison inconnue. Vous devez chercher une autre entrée. Vous venez de trouver une entrée qui semble sure. Néanmoins, il faut déverrouiller la porte pour rentrer. Pour ce faire, vous devrez deviner un nombre entre 1 et 100. Vous avez 10 essais.
 
 
 Entrez votre nombre
@@ -9,12 +7,11 @@ C'est plus
 
 C'est moins
 
-Il vous reste :
+Nombre d'essais restants:
 
 Vous avez gagné
 
-Vous avez perdu
-Réessayez !
+Vous avez perdu Réessayez !
 
 Félicitations ! Vous avez réussi à rentrer. Vous pouvez constater l’ampleur des dégâts… Il faut désormais que vous déblayez avant de reconstruire… Attention, les décombres peuvent cacher de bonnes comme de mauvaises choses. Gardez les yeux ouverts.
 Pour déblayer, il vous faut des outils. Ils sont peut-être dans l’atelier. 
