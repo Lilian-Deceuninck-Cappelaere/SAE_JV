@@ -52,18 +52,15 @@ void readparagraph(const char *fileName, int lineNumber, int lineEnd)
     char buffer[1000];
     int currentLine = 1;
 
-    while (currentLine != lineEnd)
+    while (fgets(buffer, sizeof(buffer), file) != NULL)
     {
-        if ((currentLine >= lineNumber)&&(currentLine <= lineEnd))
+        if (currentLine >= lineNumber && currentLine <= lineEnd)
         {
-            printf("%s\n", buffer);
-            fclose(file);
-            return;
+            printf("%s", buffer);
         }
         currentLine++;
     }
 
-    printf("Line %d not found in the file.\n", lineNumber);
     fclose(file);
 }
 
@@ -77,13 +74,13 @@ char select_language(char *language)
         printf("Choisir la langue (fr) / Select language (en) : ");
         scanf("%s", language);
 
-        if (strcmp(language, "fr") == 0)
+        if ((strcmp(language, "fr") == 0) || (strcmp(language, "FR") == 0) || (strcmp(language, "Fr") == 0) || (strcmp(language, "fR") == 0))
         {
             printf("****Jeux en Français****\n\n");
             ok = 1;
         }
 
-        else if (strcmp(language, "en") == 0)
+        else if ((strcmp(language, "en") == 0) || (strcmp(language, "EN") == 0) || (strcmp(language, "En") == 0) || (strcmp(language, "eN") == 0))
         {
             printf("****Game in English****\n");
             ok = 1;
