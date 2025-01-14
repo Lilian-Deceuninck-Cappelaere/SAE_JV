@@ -39,6 +39,33 @@ void readLine(const char *fileName, int lineNumber)
     fclose(file);
 }
 
+void readparagraph(const char *fileName, int lineNumber, int lineEnd)
+/*Read the paragraph between lineNumber and lineEnd*/
+{
+    FILE *file = fopen(fileName, "r");
+    if (file == NULL)
+    {
+        printf("Could not open file %s\n", fileName);
+        return;
+    }
+
+    char buffer[1000];
+    int currentLine = 1;
+
+    while (fgets(buffer, sizeof(buffer), file) != NULL)
+    {
+        if ((currentLine == lineNumber)||(currentLine <= lineEnd)&&(currentLine >= lineNumber))
+        {
+            printf("%s", buffer);
+            fclose(file);
+            return;
+        }
+        currentLine++;
+    }
+
+    printf("Line %d not found in the file.\n", lineNumber);
+    fclose(file);
+}
 
 char select_language(char *language)
 /*Choose the language of the game*/
@@ -115,7 +142,8 @@ int main(int argc, char *argv[])
 
     while (end == 0 && player.pv > 0)
     {
-        printf("Choose ?");
+        readparagraph("chap1_fr.txt", 21, 25);
+        readLine(fileName, 11);
         scanf("%d", &action);
         switch (action)
         {

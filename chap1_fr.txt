@@ -22,7 +22,7 @@ Félicitations ! Vous avez réussi à rentrer. Vous pouvez constater l’ampleur
 Pour déblayer, il vous faut des outils. Ils sont peut-être dans l’atelier. 
 Nouvelle quête : trouver les outils.
 Félicitations ! Vous avez trouvé les outils.
-Les outils peuvent-être trouvés dans votre inventaire.
+Les outils peuvent être trouvés dans votre inventaire.
 
 Un zombie approche.
 Vous avez trouvé des clés sur le corps du zombie.
@@ -30,7 +30,7 @@ Vous avez trouvé des clés sur le corps du zombie.
 You can return inside the building it might be safer than outside… 
 Vous pouvez retourner à l’intérieur, c’est peut-être plus sûr que dehors…
 Que souhaitez-vous faire :
-Etablir votre camp
+Établir votre camp
 Visiter l’IUT
 Commencer à déblayer
 

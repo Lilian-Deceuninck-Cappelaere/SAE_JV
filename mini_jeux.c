@@ -41,21 +41,22 @@ void guess_the_number(char *fileName){
     numfound=false;
 
     while((numfound = false) || (counter <= 10)){
-        // readLine(fileName, 5);
-        printf("?");
+        readLine(fileName, 6);
+        // printf("?");
         scanf("%d",&userinputnumber);
         if(numbertofind==userinputnumber){
-            readLine(fileName, 7);
+            readLine(fileName, 8);
             numfound=true;
         }
         else if (userinputnumber < numbertofind)
         {
-            printf("c'est plus");
+            readLine(fileName, 8);
         }
         else
         {
-            printf("c'est moins");
+            readLine(fileName, 10);
         }
+        readLine(fileName, 12);
         printf("%d", counter);
 
         counter++;
@@ -67,7 +68,7 @@ void guess_the_number(char *fileName){
 
 int main(){
     char fileName[20];
-    snprintf(fileName, sizeof(fileName), "intro_fr.txt");
+    snprintf(fileName, sizeof(fileName), "chap1_fr.txt");
 
     srand(time(0));
     guess_the_number(fileName);
