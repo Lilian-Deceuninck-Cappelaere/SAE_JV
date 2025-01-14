@@ -4,15 +4,12 @@
 #include <stdlib.h>
 #include <sys/stat.h>
 
-// #define max_map 10
 
 typedef struct {
     char name[20];
     char gender[10];
     int pv;
 } character;
-
-// typedef int mapDef[max_map / 2][max_map / 2];
 
 
 void readLine(const char *fileName, int lineNumber)
@@ -108,6 +105,7 @@ void intro(char *fileName, character *player)
     scanf("%s", &player->name);
     readLine(fileName, 7);
     scanf("%s", &player->gender);
+    // player->pv = 100;
     readLine(fileName, 9);
     printf("\t%s\n\t%s\n\t%d\n\n", &player->name, &player->gender, &player->pv);
 }
@@ -129,49 +127,26 @@ void fight(character *player, character *zombie, int end)
     printf("Zombie pv : %d\n", zombie->pv);    
 }
 
-// void affmaps(mapDef maps)
-// /*Print map*/
-// {
-//     int i, j;
-//     for (i = 0; i < max_map; i++)
-//     {
-//         printf("|%d", maps[i][0]);
-//     }
-//     printf("| \n\n");
-//     // for (j = i; j < max_map; j++)
-//     // {
-//     //     printf("|%d", maps[j][1]);
-//     // }
-// }
 
 int main(int argc, char *argv[])
 {
     char language[3], fileName[20];
     int end, action, i, j;
-    // mapDef maps;
+
     character player;
     player.pv = 100;
     character zombie;
     zombie.pv = 20;
     end = 0;
-
-    // for ( i = 0; i < max_map; i++)
-    // {
-    //     for (j = 0;j < max_map;j++)
-    //     {
-    //         maps[i][j] = i + 1;
-    //     }
-    // }
     
 
     select_language(language);
     snprintf(fileName, sizeof(fileName), "%s/intro.txt", language);
-    intro(fileName, &player);
 
     while (end == 0 && player.pv > 0)
     {
-        // affmaps(maps);
-        // readparagraph("chap1_fr.txt", 21, 25);
+        intro(fileName, &player);
+        snprintf(fileName, sizeof(fileName), "%s/intro.txt", language);
         readLine(fileName, 11);
         scanf("%d", &action);
         switch (action)
