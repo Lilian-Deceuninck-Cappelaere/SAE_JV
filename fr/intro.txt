@@ -5,8 +5,3 @@ Bonjour, vous faites partie des survivants de l'apocalypse. La situation s’est
 Quel est votre nom ?
 
 Choisissez le genre de votre personnage :
-
-Caractéristiques diverses (nom, genre pv)
-
-
-Quel action voulez vous : 1 attaquer ; 2 ...

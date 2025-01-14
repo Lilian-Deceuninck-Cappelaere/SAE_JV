@@ -109,59 +109,78 @@ int Randomnum(int min, int max)
 
 void guess_the_number(char *fileName)
 {
-    int numbertofind = Randomnum(1, 100), counter, userinputnumber;
-    bool numfound;
+    int numbertofind, counter, userinputnumber;
+    bool numfound, gamewin;
 
+    numbertofind = Randomnum(1, 100);
     userinputnumber = 0;
     counter = 10;
     numfound = false;
 
     while ((numfound == false) && (counter > 0))
     {
-        readLine(fileName, 4);
+        readLine(fileName, 9);
         scanf("%d", &userinputnumber);
         if (numbertofind == userinputnumber)
         {
-            readLine(fileName, 12);
+            readLine(fileName, 17);
             numfound = true;
         }
         else if (userinputnumber < numbertofind)
         {
-            readLine(fileName, 6);
+            readLine(fileName, 11);
             counter--;
-            readLine(fileName, 10);
+            readLine(fileName, 15);
             printf("%d\n", counter);
         }
         else
         {
-            readLine(fileName, 8);
+            readLine(fileName, 13);
             counter--;
-            readLine(fileName, 10);
+            readLine(fileName, 15);
             printf("%d\n", counter);
         }
-        
     }
     if (counter == 0 && numfound == false)
     {
-        readLine(fileName, 14);
-    }
+        readLine(fileName, 19);
+        guess_the_number(fileName);
+    } 
+
 }
 
-void fight(character *player, character *zombie, int end) 
+bool fight(char *fileName, character *player, character *zombie, bool end) 
 /*Fight between the player and the zombie*/
 {
     int playerAttack, zombieAttack;
-    playerAttack = rand() % 15 + 1;
-    zombieAttack = rand() % 10 + 1;
+    while ((player->pv > 0) && (zombie->pv > 0))
+    {
+        playerAttack = rand() % 15 + 5;
+        zombieAttack = rand() % 10;
 
-    printf("Player attack : %d\n", playerAttack);
-    printf("Zombie attack : %d\n", zombieAttack);
+        printf("%s", player->name);
+        readLine(fileName, 32);
+        printf("%d\n", playerAttack);
+        readLine(fileName, 33);
+        printf("%d\n", zombieAttack);
 
-    player->pv -= zombieAttack;
-    zombie->pv -= playerAttack;
+        player->pv -= zombieAttack;
+        zombie->pv -= playerAttack;
 
-    printf("Player pv : %d\n", player->pv);
-    printf("Zombie pv : %d\n", zombie->pv);    
+        printf("%s", player->name);
+        readLine(fileName, 35);
+        printf("%d\n", player->pv);
+        readLine(fileName, 36);
+        printf("%d\n", zombie->pv);
+    }
+    
+    if (player->pv == 0)
+    {
+        // readLine()
+        end = true;
+    }    
+
+    return end;
 }
 
 void intro(char *fileName, character *player)
@@ -175,50 +194,51 @@ void intro(char *fileName, character *player)
     scanf("%s", &player->gender);
 }
 
-void chap1(char *fileName, character *player)
+void chap1(char *fileName, character *player, character *zombie, int end)
 /*Chapter 1 of story*/
 {
     printf("\n");
     readLine(fileName, 1);
+    printf("%s", player->name);
+    readparagraph(fileName, 2, 6);
     srand(time(0));
     printf("\n");
     guess_the_number(fileName);
     printf("\n");
-    readLine(fileName, 16);
+    readparagraph(fileName, 21, 26);
+    /*Add roll of dice*/
+    readparagraph(fileName, 29, 30);
+    fight(fileName,player, zombie, end);
+    if (end == false)
+    {
+        readLine(fileName, 31);
+        end = true;
+    }
 }
 
 
 int main(int argc, char *argv[])
 {
     char language[3], fileName[20];
-    int end, action, i, j;
+    int action, i, j;
+    bool end;
 
     character player;
     player.pv = 100;
     character zombie;
     zombie.pv = 20;
-    end = 0;
+    end = false;
     
 
     select_language(language);
     snprintf(fileName, sizeof(fileName), "%s/intro.txt", language);
 
-    while (end == 0 && player.pv > 0)
-    {
+    // while (end == false && player.pv > 0)
+    // {
         intro(fileName, &player);
         snprintf(fileName, sizeof(fileName), "%s/chap1.txt", language);
-        chap1(fileName, &player);
-        scanf("%d", &action);
-        switch (action)
-        {
-        case 1:
-            fight(&player, &zombie, end);
-            break;
-        
-        default:
-            break;
-        }
-    }
+        chap1(fileName, &player, &zombie, end);
+    // }
     
     return 0;
 }

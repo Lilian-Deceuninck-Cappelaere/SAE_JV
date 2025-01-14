@@ -2,9 +2,6 @@ Hello, you're a part of the apocalypse survivors. The situation settled down and
 
 
 
-Enter your in game name :
+Enter your name for the game :
  
 Select your character gender male/female :
-
-(Player’s character specs)
-

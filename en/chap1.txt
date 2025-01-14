@@ -1,22 +1,38 @@
-Thank you for joining this thriving adventure. Before doing anything in the IUT, you need to enter the building. Sadly, the main entrance is blocked for an unknown reason. You need to search another way in.
-
-You have just found a safe entrance, but you need to unlock the door first. To unlock the door, you must find the right number between 1 and 100. You have 10 tries.
+Thank you for joining this thriving adventure.
+Before doing anything in the IUT, you need to enter the building.
+Sadly, the main entrance is blocked for an unknown reason.
+You have just found a safe entrance.
+But you need to unlock the door first. 
+To unlock the door, you must find the right number between 1 and 100. You have 10 tries.
 
 
 Enter your number
 
-You won!
+It's more
 
-You lost…
-Retry!
+It's less
 
-Congrats! You’re inside! Now you realise how damaged the IUT is… You need to clean up everything before starting to rebuild it… Pay attention, rubble can hide useful stuff but also dangerous things. Keep your eyes open. 
+Number of attempts remaining:
 
-To clean up, you need tools. They might be in the shops…
-New quest: find the tools
-Congrats! You’ve found the tools.
-Tools can be find in your inventory
+You have won
 
-A zombie appears.
-You have found keys on zombie’s corpse.
+You have lost, try again!
 
+Congrats! You’re inside! Now you realise how damaged the IUT is… 
+You need to clean up everything before starting to rebuild it… 
+Pay attention, rubble can hide useful stuff but also dangerous things. 
+Keep your eyes open. To clean up, you need tools. They might be in the shops…
+
+********** New quest: find the tools. **********
+
+Congratulations! You found the tools.
+
+A zombie approaches.
+
+ attack : 
+Zombie attack :
+
+ hp : 
+Zombie hp :
+
+You found keys on the zombie's body.
