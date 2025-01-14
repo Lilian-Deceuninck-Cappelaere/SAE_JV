@@ -113,7 +113,7 @@ int main(int argc, char *argv[])
     snprintf(fileName, sizeof(fileName), "intro_%s.txt", language);
     intro(fileName, &player);
 
-    while (end == 0)
+    while (end == 0 && player.pv > 0)
     {
         printf("Choose ?");
         scanf("%d", action);
