@@ -7,7 +7,7 @@
 #include <time.h>
 #include <stdbool.h>
 
-
+/*The player and zombie statistics*/
 typedef struct {
     char name[20];
     char gender[10];
@@ -18,22 +18,17 @@ typedef struct {
 void readLine(const char *fileName, int lineNumber)
 /*Read the line number lineNumber*/
 {
-    FILE *file = fopen(fileName, "r");
-    if (file == NULL)
-    {
-        printf("Could not open file %s\n", fileName);
-        return;
-    }
+    FILE *file = fopen(fileName, "r");  /*Open the file in read rights*/
 
-    char buffer[1000];
+    char buffer[1000];    /*Containt the caracters of the text*/
     int currentLine = 1;
 
-    while (fgets(buffer, sizeof(buffer), file) != NULL)
+    while (fgets(buffer, sizeof(buffer), file) != NULL) /*While line not find*/
     {
         if (currentLine == lineNumber)
         {
             printf("%s", buffer);
-            fclose(file);
+            fclose(file);       /*Close file*/
             return;
         }
         currentLine++;
@@ -47,12 +42,7 @@ void readparagraph(const char *fileName, int lineNumber, int lineEnd)
 /*Read the paragraph between lineNumber and lineEnd*/
 {
     FILE *file = fopen(fileName, "r");
-    if (file == NULL)
-    {
-        printf("Could not open file %s\n", fileName);
-        return;
-    }
-
+    
     char buffer[1000];
     int currentLine = 1;
 
@@ -78,7 +68,7 @@ char select_language(char *language)
         printf("Choisir la langue (fr) / Select language (en) : ");
         scanf("%s", language);
 
-        if ((strcmp(language, "fr") == 0) || (strcmp(language, "FR") == 0) || (strcmp(language, "Fr") == 0) || (strcmp(language, "fR") == 0))
+        if ((strcmp(language, "fr") == 0) || (strcmp(language, "FR") == 0) || (strcmp(language, "Fr") == 0) || (strcmp(language, "fR") == 0)) /*compares strings*/
         {
             printf("****Jeux en Français****\n\n");
             ok = 1;
@@ -100,14 +90,13 @@ char select_language(char *language)
 }
 
 
-
 int Randomnum(int min, int max)
 /*Random number generator function*/
 {
     return rand() % (max - min + 1) + min;
 }
 
-void guess_the_number(char *fileName)
+void guess_the_number(char *fileName)           /*A mini game to find a number*/
 {
     int numbertofind, counter, userinputnumber;
     bool numfound, gamewin;
@@ -119,7 +108,7 @@ void guess_the_number(char *fileName)
 
     while ((numfound == false) && (counter > 0))
     {
-        readLine(fileName, 9);
+        readLine(fileName, 9);                  /*Read line 9 in file*/
         scanf("%d", &userinputnumber);
         if (numbertofind == userinputnumber)
         {
@@ -194,7 +183,7 @@ void intro(char *fileName, character *player)
 }
 
 void chap1(char *fileName, character *player, character *zombie, int end)
-/*Chapter 1 of story*/
+/*Chapter 1 of the game*/
 {
     printf("\n");
     readLine(fileName, 1);
@@ -222,6 +211,7 @@ int main(int argc, char *argv[])
     int action, i, j;
     bool end;
 
+    /*Initializing Player and Zombie Settings*/
     character player;
     player.pv = 100;
     character zombie;
