@@ -8,6 +8,7 @@ int Randomnum(int min, int max) {
     return rand() % (max - min + 1) + min;
 }
 
+
 void readLine(const char *fileName, int lineNumber)
 /*Read the line number lineNumber*/
 {
@@ -31,30 +32,44 @@ void readLine(const char *fileName, int lineNumber)
     fclose(file);
 }
 
-void guess_the_number(){
-    int numbertofind = Randomnum(1,100);
-    int userinputnumber;
-    int counter;
+void guess_the_number(char *fileName){
+    int numbertofind = Randomnum(1, 100), counter, userinputnumber;
     bool numfound;
+
     userinputnumber=0;
     counter=0;
     numfound=false;
-    while(numfound=false && counter<=10){
-        readLine("chap1_fr.txt", 5);
+
+    while((numfound = false) || (counter <= 10)){
+        // readLine(fileName, 5);
+        printf("?");
         scanf("%d",&userinputnumber);
         if(numbertofind==userinputnumber){
-            readLine("chap1_fr.txt", 7);
+            readLine(fileName, 7);
             numfound=true;
-        }   
+        }
+        else if (userinputnumber < numbertofind)
+        {
+            printf("c'est plus");
+        }
+        else
+        {
+            printf("c'est moins");
+        }
+        printf("%d", counter);
+
         counter++;
     }
     if(counter>10 && numfound==false){
-        readLine("chap1_fr.txt", 9);
+        readLine(fileName, 9);
     }
 }
 
 int main(){
+    char fileName[20];
+    snprintf(fileName, sizeof(fileName), "intro_fr.txt");
+
     srand(time(0));
-    guess_the_number();
+    guess_the_number(fileName);
     return(0);
 }
