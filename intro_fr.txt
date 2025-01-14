@@ -8,3 +8,4 @@ Choisissez le genre de votre personnage :
 
 (Caractéristiques diverses)
 
+Quel action voulez vous : 1 attaquer ; 2 ...
