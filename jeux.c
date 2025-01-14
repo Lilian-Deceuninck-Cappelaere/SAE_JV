@@ -116,7 +116,7 @@ void guess_the_number(char *fileName)
     counter = 10;
     numfound = false;
 
-    while ((numfound = false) && (counter > 0))
+    while ((numfound == false) && (counter > 0))
     {
         readLine(fileName, 4);
         scanf("%d", &userinputnumber);
@@ -183,6 +183,8 @@ void chap1(char *fileName, character *player)
     srand(time(0));
     printf("\n");
     guess_the_number(fileName);
+    printf("\n");
+    readLine(fileName, 16);
 }
 
 
