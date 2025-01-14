@@ -8,6 +8,3 @@ Select your character gender male/female :
 
 (Player’s character specs)
 
-Hi, thank you for joining this thriving adventure. Before doing anything in the IUT, you need to enter the building. Sadly, the main entrance is blocked for an unknown reason. You need to search another way in.
-
-You have just found a safe entrance, but you need to unlock the door first. To unlock the door, you must find the right number between 1 and 100. You have 10 tries.
