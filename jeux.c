@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include <sys/stat.h>
 
-#define max_map 10
+// #define max_map 10
 
 typedef struct {
     char name[20];
@@ -12,7 +12,7 @@ typedef struct {
     int pv;
 } character;
 
-typedef int mapDef[max_map / 2][max_map / 2];
+// typedef int mapDef[max_map / 2][max_map / 2];
 
 
 void readLine(const char *fileName, int lineNumber)
@@ -108,6 +108,8 @@ void intro(char *fileName, character *player)
     scanf("%s", &player->name);
     readLine(fileName, 7);
     scanf("%s", &player->gender);
+    readLine(fileName, 9);
+    printf("\t%s\n\t%s\n\t%d\n\n", &player->name, &player->gender, &player->pv);
 }
 
 void fight(character *player, character *zombie, int end) 
@@ -163,13 +165,13 @@ int main(int argc, char *argv[])
     
 
     select_language(language);
-    snprintf(fileName, sizeof(fileName), "intro_%s.txt", language);
+    snprintf(fileName, sizeof(fileName), "%s/intro.txt", language);
     intro(fileName, &player);
 
     while (end == 0 && player.pv > 0)
     {
         // affmaps(maps);
-        readparagraph("chap1_fr.txt", 21, 25);
+        // readparagraph("chap1_fr.txt", 21, 25);
         readLine(fileName, 11);
         scanf("%d", &action);
         switch (action)

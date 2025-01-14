@@ -6,6 +6,7 @@ Quel est votre nom ?
 
 Choisissez le genre de votre personnage :
 
-(Caractéristiques diverses)
+Caractéristiques diverses (nom, genre pv)
+
 
 Quel action voulez vous : 1 attaquer ; 2 ...
