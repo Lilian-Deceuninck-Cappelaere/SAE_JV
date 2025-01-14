@@ -3,7 +3,15 @@ Bonjour, merci d’avoir rejoint l’aventure. Avant de remettre de l’ordre da
 Vous venez de trouver une entrée qui semble sure. Néanmoins, il faut déverrouiller la porte pour rentrer. Pour ce faire, vous devrez deviner un nombre entre 1 et 100. Vous avez 10 essais.
 
 
+
+
 Entrez votre nombre
+
+C'est plus
+
+C'est moins
+
+Il vous reste :
 
 Vous avez gagné
 
