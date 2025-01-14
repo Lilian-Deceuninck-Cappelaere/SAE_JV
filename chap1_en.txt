@@ -9,3 +9,14 @@ You won!
 
 You lost…
 Retry!
+
+Congrats! You’re inside! Now you realise how damaged the IUT is… You need to clean up everything before starting to rebuild it… Pay attention, rubble can hide useful stuff but also dangerous things. Keep your eyes open. 
+
+To clean up, you need tools. They might be in the shops…
+New quest: find the tools
+Congrats! You’ve found the tools.
+Tools can be find in your inventory
+
+A zombie appears.
+You have found keys on zombie’s corpse.
+
