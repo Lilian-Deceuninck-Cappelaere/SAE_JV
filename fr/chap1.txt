@@ -35,4 +35,4 @@ Zombie attaque :
  pv :
 Zombie pv :
 
-Vous avez trouvé des clés sur le corps du zombie.
+Vous avez trouvé des clés sur le corps du zombie. (****Fin provisoire du jeu****)

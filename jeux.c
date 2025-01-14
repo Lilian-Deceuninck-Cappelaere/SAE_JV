@@ -176,7 +176,6 @@ bool fight(char *fileName, character *player, character *zombie, bool end)
     
     if (player->pv == 0)
     {
-        // readLine()
         end = true;
     }    
 
@@ -211,7 +210,7 @@ void chap1(char *fileName, character *player, character *zombie, int end)
     fight(fileName,player, zombie, end);
     if (end == false)
     {
-        readLine(fileName, 31);
+        readLine(fileName, 38);
         end = true;
     }
 }
