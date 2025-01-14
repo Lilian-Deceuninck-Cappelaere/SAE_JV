@@ -77,9 +77,9 @@ void intro(char *fileName, character *player)
     readLine(fileName, 1);
     printf("\n");
     readLine(fileName, 5);
-    scanf("%s", player->name);
+    scanf("%s", &player->name);
     readLine(fileName, 7);
-    scanf("%s", player->gender);
+    scanf("%s", &player->gender);
 }
 
 void fight(character *player, character *zombie, int end) 
@@ -116,7 +116,7 @@ int main(int argc, char *argv[])
     while (end == 0 && player.pv > 0)
     {
         printf("Choose ?");
-        scanf("%d", action);
+        scanf("%d", &action);
         switch (action)
         {
         case 1:
