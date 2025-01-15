@@ -15,13 +15,20 @@ typedef struct {
     int tools;
 } character;
 
+void print_stats(character *player)
+{
+    printf("%s", player->name);
+    printf("%d", player->pv);
+    printf("")
+}
+
 
 void readLine(const char *fileName, int lineNumber)
 /*Read the line number lineNumber*/
 {
     FILE *file = fopen(fileName, "r");  /*Open the file in read rights*/
 
-    char buffer[1000];    /*Containt the caracters of the text*/
+    char buffer[1000];    /*Containts the caracters of the text*/
     int currentLine = 1;
 
     while (fgets(buffer, sizeof(buffer), file) != NULL) /*While line not find*/
