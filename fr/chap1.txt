@@ -61,9 +61,16 @@ Vous devez les retirer avant de continuer aller déblayer !
 
 
 
-
-
-
 (Pour récupérer des points de vie vous devez…)
 
-Vous retournez à l’intérieur, c’est peut-être plus sûr que dehors…
+
+
+(après que l'utilisateur ait déblayé)
+Vous pouvez donc accéder à de nouvelles pièces.
+Où souhaitez-vous aller ?
+Salle informatique
+Salle de TD
+Salle de TP
+Bureau de Mr Synave
+Bibliothèque
+

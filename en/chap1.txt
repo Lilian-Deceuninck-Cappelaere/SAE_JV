@@ -57,3 +57,13 @@ You finished clearing the hall and new doors are accessible. You can visit new r
 (If users choose to visit before cleaning :)
 
 You’re visiting the hall. You fall into a trap, and you lose 5 health points. You find out that doors are blocked by the rubble. You must clear it before proceeding further…
+
+
+You can visit new rooms.
+Where do you want to go?
+Computer room
+Tutorial room (check word)
+Practical Work Room (check word)
+Mr Synave’s office
+Library
+
