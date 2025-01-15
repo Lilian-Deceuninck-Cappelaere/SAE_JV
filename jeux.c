@@ -103,9 +103,9 @@ int roll_dice(char *fileName)
 {
     int dice;
     dice = 0;
-    while (dice <= 4)
+    while (dice <= 5)
     {
-        if (dice < 4)
+        if (dice < 5)
         {
             printf("\n");
             readLine(fileName, 30);
@@ -113,7 +113,7 @@ int roll_dice(char *fileName)
             printf("%d", dice);
         }
 
-        if (dice >= 4)
+        if (dice >= 5)
         {
             printf("\n");
             readLine(fileName, 32);
@@ -173,21 +173,21 @@ bool fight(char *fileName, character *player, character *zombie, bool end)
     while ((player->pv > 0) && (zombie->pv > 0))
     {
         playerAttack = rand() % 15 + player->tools;
-        zombieAttack = rand() % 10;
+        zombieAttack = rand() % 15;
 
         printf("%s", player->name);
-        readLine(fileName, 36);
+        readLine(fileName, 42);
         printf("%d\n", playerAttack);
-        readLine(fileName, 37);
+        readLine(fileName, 43);
         printf("%d\n", zombieAttack);
 
         player->pv -= zombieAttack;
         zombie->pv -= playerAttack;
 
         printf("%s", player->name);
-        readLine(fileName, 39);
+        readLine(fileName, 45);
         printf("%d\n", player->pv);
-        readLine(fileName, 40);
+        readLine(fileName, 46);
         printf("%d\n", zombie->pv);
         sleep(4);
         printf("\n");                       /*Stopt 4 sec execution*/
@@ -204,18 +204,18 @@ bool fight(char *fileName, character *player, character *zombie, bool end)
 void intro(char *fileName, character *player)
 /*Introduction of the game*/
 {
-    readLine(fileName, 1);
+    readparagraph(fileName, 1, 5);
     printf("\n");
-    readLine(fileName, 5);
+    readLine(fileName, 10);
     scanf("%s", &player->name);
-    readLine(fileName, 7);
+    readLine(fileName, 12);
     scanf("%s", &player->gender);
 }
 
 void chap1(char *fileName, character *player, character *zombie, int end)
 /*Chapter 1 of the game*/
 {
-    int key;
+    int key, action, i;
 
     printf("\n");
     readLine(fileName, 1);
@@ -232,14 +232,38 @@ void chap1(char *fileName, character *player, character *zombie, int end)
     {
         roll_dice(fileName);
     }
-    player->tools = 5;
-    readLine(fileName, 34);
-    scanf("%d", &key);
-    if (key == 1)
+    player->tools = 3;
+    printf("\n");
+    readparagraph(fileName, 34, 36);
+    scanf("%d", &action);
+    for (i = 0; i < 2; i++)
     {
-        printf("\n");
-        fight(fileName, player, zombie, end);
+        switch (action)
+        {
+        case 1:
+            readLine(fileName, 40);
+            scanf("%d", &key);
+            if (key == 1)
+            {
+                printf("\n");
+                fight(fileName, player, zombie, end);
+            }
+            readparagraph(fileName, 48, 54);
+            break;
+
+        case 2:
+            readparagraph(fileName, 57, 61);
+            player->pv -= 20;
+            action = 1;
+            break;
+        
+        default:
+            break;
+        }
     }
+    
+    
+
 
     if (end == false)
     {
