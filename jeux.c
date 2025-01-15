@@ -6,12 +6,14 @@
 #include <string.h>
 #include <time.h>
 #include <stdbool.h>
+#include <unistd.h>    /*For stopt temporary execution*/
 
 /*The player and zombie statistics*/
 typedef struct {
     char name[20];
     char gender[10];
     int pv;
+    int tools;
 } character;
 
 
@@ -58,6 +60,7 @@ void readparagraph(const char *fileName, int lineNumber, int lineEnd)
     fclose(file);
 }
 
+
 char select_language(char *language)
 /*Choose the language of the game*/
 {
@@ -89,12 +92,37 @@ char select_language(char *language)
     return *language;
 }
 
-
 int Randomnum(int min, int max)
 /*Random number generator function*/
 {
     return rand() % (max - min + 1) + min;
 }
+
+int roll_dice(char *fileName)
+/*Roll of dice up to result*/
+{
+    int dice;
+    dice = 0;
+    while (dice <= 4)
+    {
+        if (dice < 4)
+        {
+            printf("\n");
+            readLine(fileName, 30);
+            dice = Randomnum(1, 6);
+            printf("%d", dice);
+        }
+
+        if (dice >= 4)
+        {
+            printf("\n");
+            readLine(fileName, 32);
+        }
+    }
+}
+
+
+
 
 void guess_the_number(char *fileName)           /*A mini game to find a number*/
 {
@@ -144,23 +172,25 @@ bool fight(char *fileName, character *player, character *zombie, bool end)
     int playerAttack, zombieAttack;
     while ((player->pv > 0) && (zombie->pv > 0))
     {
-        playerAttack = rand() % 15 + 5;
+        playerAttack = rand() % 15 + player->tools;
         zombieAttack = rand() % 10;
 
         printf("%s", player->name);
-        readLine(fileName, 32);
+        readLine(fileName, 36);
         printf("%d\n", playerAttack);
-        readLine(fileName, 33);
+        readLine(fileName, 37);
         printf("%d\n", zombieAttack);
 
         player->pv -= zombieAttack;
         zombie->pv -= playerAttack;
 
         printf("%s", player->name);
-        readLine(fileName, 35);
+        readLine(fileName, 39);
         printf("%d\n", player->pv);
-        readLine(fileName, 36);
+        readLine(fileName, 40);
         printf("%d\n", zombie->pv);
+        sleep(4);
+        printf("\n");                       /*Stopt 4 sec execution*/
     }
     
     if (player->pv == 0)
@@ -185,6 +215,8 @@ void intro(char *fileName, character *player)
 void chap1(char *fileName, character *player, character *zombie, int end)
 /*Chapter 1 of the game*/
 {
+    int key;
+
     printf("\n");
     readLine(fileName, 1);
     printf("%s", player->name);
@@ -194,9 +226,21 @@ void chap1(char *fileName, character *player, character *zombie, int end)
     guess_the_number(fileName);
     printf("\n");
     readparagraph(fileName, 21, 26);
-    /*Add roll of dice*/
-    readparagraph(fileName, 29, 30);
-    fight(fileName,player, zombie, end);
+    readLine(fileName, 28);
+    scanf("%d", &key);
+    if (key == 1)
+    {
+        roll_dice(fileName);
+    }
+    player->tools = 5;
+    readLine(fileName, 34);
+    scanf("%d", &key);
+    if (key == 1)
+    {
+        printf("\n");
+        fight(fileName, player, zombie, end);
+    }
+
     if (end == false)
     {
         readLine(fileName, 38);
@@ -222,12 +266,12 @@ int main(int argc, char *argv[])
     select_language(language);
     snprintf(fileName, sizeof(fileName), "%s/intro.txt", language);
 
-    // while (end == false && player.pv > 0)
-    // {
+    while (end == false && player.pv > 0)
+    {
         intro(fileName, &player);
         snprintf(fileName, sizeof(fileName), "%s/chap1.txt", language);
         chap1(fileName, &player, &zombie, end);
-    // }
+    }
     
     return 0;
 }
