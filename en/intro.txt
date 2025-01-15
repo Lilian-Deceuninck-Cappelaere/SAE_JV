@@ -8,5 +8,3 @@ Good luck!
 
 
 Enter your name for the game :
- 
-Select your character gender male/female : 
