@@ -11,7 +11,6 @@
 /*The player and zombie statistics*/
 typedef struct {
     char name[20];
-    char gender[10];
     int pv;
     int tools;
 } character;
@@ -189,7 +188,7 @@ bool fight(char *fileName, character *player, character *zombie, bool end)
         printf("%d\n", player->pv);
         readLine(fileName, 46);
         printf("%d\n", zombie->pv);
-        sleep(4);
+        sleep(3);
         printf("\n");                       /*Stopt 4 sec execution*/
     }
     
@@ -208,8 +207,6 @@ void intro(char *fileName, character *player)
     printf("\n");
     readLine(fileName, 10);
     scanf("%s", &player->name);
-    readLine(fileName, 12);
-    scanf("%s", &player->gender);
 }
 
 void chap1(char *fileName, character *player, character *zombie, int end)
@@ -249,6 +246,7 @@ void chap1(char *fileName, character *player, character *zombie, int end)
                 fight(fileName, player, zombie, end);
             }
             readparagraph(fileName, 48, 54);
+            i = 1;
             break;
 
         case 2:
@@ -272,6 +270,11 @@ void chap1(char *fileName, character *player, character *zombie, int end)
     }
 }
 
+void chap2(char *fileName, character *player, int end)
+/*Chapter 2 of the game*/
+{
+
+}
 
 int main(int argc, char *argv[])
 {
@@ -289,12 +292,14 @@ int main(int argc, char *argv[])
 
     select_language(language);
     snprintf(fileName, sizeof(fileName), "%s/intro.txt", language);
+    intro(fileName, &player);
 
-    while (end == false && player.pv > 0)
+    while (end == false)
     {
-        intro(fileName, &player);
         snprintf(fileName, sizeof(fileName), "%s/chap1.txt", language);
         chap1(fileName, &player, &zombie, end);
+        snprintf(fileName, sizeof(fileName), "%s/chap2.txt", language);
+        chap2(fileName, &player, end);
     }
     
     return 0;
