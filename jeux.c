@@ -15,11 +15,20 @@ typedef struct {
     int tools;
 } character;
 
-void print_stats(character *player)
+void print_stats(char *filestats, char *language, character *player)
 {
-    printf("%s", player->name);
-    printf("%d", player->pv);
-    printf("")
+    snprintf(filestats, sizeof(filestats), "%s/stats.txt", language);
+    FILE *file = fopen(filestats, "w");
+
+    if ((strcmp(language, "fr") == 0) || (strcmp(language, "FR") == 0) || (strcmp(language, "Fr") == 0) || (strcmp(language, "fR") == 0))
+    {
+        fprintf(file, "**** Vos statistiques ****\n\tNom : %s\n\tPoints de vie : %d\n\tPoints d'attaque outils : %d", player->name, player->pv, player->tools);
+    }
+    else
+    {
+        fprintf(file, "**** Your statistics ****\n\tName : %s\n\tHealth points : %d\n\tTools attack  : %d", player->name, player->pv, player->tools);
+    }
+    fclose(file);
 }
 
 
@@ -285,7 +294,7 @@ void chap2(char *fileName, character *player, int end)
 
 int main(int argc, char *argv[])
 {
-    char language[3], fileName[20];
+    char language[3], fileName[20], filestats[20];
     int action, i, j;
     bool end;
 
@@ -300,6 +309,8 @@ int main(int argc, char *argv[])
     select_language(language);
     snprintf(fileName, sizeof(fileName), "%s/intro.txt", language);
     intro(fileName, &player);
+    print_stats(filestats, language, &player);
+    readparagraph(filestats, 1, 4);
 
     while (end == false)
     {
