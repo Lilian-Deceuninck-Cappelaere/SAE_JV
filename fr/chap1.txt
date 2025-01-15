@@ -25,9 +25,13 @@ Gardez les yeux ouverts. Pour déblayer, il vous faut des outils. Ils sont peut-
 
 ********** Nouvelle quête : trouver les outils. **********
 
-Félicitations ! Vous avez trouvé les outils.
+Pour trouver les outils vous devez lancer un dès de 6 le résultat obtenu doit être supérieur ou égal à 4. Appuyer sur la touche (1)
 
-Un zombie approche.
+Votre lancer :
+
+Félicitations ! Vous avez trouvé les outils et une étrange arme un lanceur de carte graphique.
+
+Un zombie approche. Appuyer sur la touche (1)
 
  attaque :
 Zombie attaque :

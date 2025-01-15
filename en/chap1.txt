@@ -25,9 +25,13 @@ Keep your eyes open. To clean up, you need tools. They might be in the shops…
 
 ********** New quest: find the tools. **********
 
-Congratulations! You found the tools.
+To find the tools, you must roll a 6-sided dice. The result must be 4 or higher. Press the key (1)
 
-A zombie approaches.
+Your roll:
+
+Congratulations! You found the Tools and a strange weapon, a graphics card launcher.
+
+A zombie approaches. Press the key (1)
 
  attack : 
 Zombie attack :
