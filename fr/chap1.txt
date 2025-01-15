@@ -36,3 +36,32 @@ Zombie attaque :
 Zombie pv :
 
 Vous avez trouvé des clés sur le corps du zombie. (****Fin provisoire du jeu****)
+
+
+Félicitations ! Vous avez réussi à rentrer. Vous pouvez constater l’ampleur des dégâts… Il faut désormais que vous déblayez avant de reconstruire… Attention, les décombres peuvent cacher de bonnes comme de mauvaises choses. Gardez les yeux ouverts.
+Pour déblayer, il vous faut des outils. Ils sont peut-être dans l’atelier. 
+Nouvelle quête : trouver les outils.
+Félicitations ! Vous avez trouvé les outils.
+Les outils peuvent-être trouvés dans votre inventaire.
+
+Un zombie approche.
+Vous avez trouvé des clés sur le corps du zombie.
+Pour récupérer des points de vie vous devez…
+
+Vous retournez à l’intérieur, c’est peut-être plus sûr que dehors…
+Vous êtes désormais à l’intérieur de l’IUT, dans le hall.
+
+Que souhaitez-vous faire :
+Visiter l’IUT
+Commencer à déblayer
+
+
+(Si l’utilisateur choisi de commencer à déblayer : )
+Un zombie vous attaque
+Vous continuez votre travail. Vous découvrez un coffre-fort verrouillé par un code. Vous trouvez également un morceau de papier qui contient le chiffre 7.
+Vous avez déblayé de nouvelles portes. Vous pouvez ainsi visiter d’autres pièces. Mais prenez garde à ce que vous trouverez derrière la porte…
+
+(Si l’utilisateur choisi de visiter avant de déblayer :)
+Vous visitez le hall. Vous tombez sur un piège et vous perdez 5 points de vie. Vous constatez que les portes sont bloquées par les décombres. Vous devez les retirer avant de continuer.
+
+

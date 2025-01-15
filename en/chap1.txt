@@ -36,3 +36,20 @@ Zombie attack :
 Zombie hp :
 
 You found keys on the zombie's body. (****End temporary****)
+To get health points, you must…
+
+You return inside the building it might be safer than outside… 
+You’re now inside the building, in the hall
+What do you want to do?
+Visit the building
+Start to clean up
+
+
+
+(If users choose to clean up :)
+You’re clearing the IUT’s hall from its rubble. You’re suddenly attacked by a zombie. You are continuing your work. You find a safe locked by a code and a piece of paper with the number seven on it…
+You finished clearing the hall and new doors are accessible. You can visit new rooms, but you never know what there is behind the doors… 
+
+(If users choose to visit before cleaning :)
+
+You’re visiting the hall. You fall into a trap, and you lose 5 health points. You find out that doors are blocked by the rubble. You must clear it before proceeding further…
