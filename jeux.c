@@ -225,7 +225,7 @@ void intro(char *fileName, character *player)
     scanf("%s", &player->name);
 }
 
-void chap1(char *fileName, character *player, character *zombie, int end)
+void chap1(char *fileName, char *filestats, char *language,  character *player, character *zombie, int end)
 /*Chapter 1 of the game*/
 {
     int key, action, i;
@@ -259,6 +259,9 @@ void chap1(char *fileName, character *player, character *zombie, int end)
             if (key == 1)
             {
                 printf("\n");
+                print_stats(filestats, language, player);
+                readparagraph(filestats, 1, 4);
+                printf("\n");
                 fight(fileName, player, zombie, end);
             }
             readparagraph(fileName, 48, 54);
@@ -268,6 +271,8 @@ void chap1(char *fileName, character *player, character *zombie, int end)
         case 2:
             readparagraph(fileName, 57, 61);
             player->pv -= 20;
+            print_stats(filestats, language, player);
+            readparagraph(filestats, 1, 4);
             action = 1;
             break;
         
@@ -297,27 +302,29 @@ int main(int argc, char *argv[])
     char language[3], fileName[20], filestats[20];
     int action, i, j;
     bool end;
-
-    /*Initializing Player and Zombie Settings*/
     character player;
-    player.pv = 100;
     character zombie;
-    zombie.pv = 20;
-    end = false;
     
+    end = false;
 
     select_language(language);
     snprintf(fileName, sizeof(fileName), "%s/intro.txt", language);
     intro(fileName, &player);
-    print_stats(filestats, language, &player);
-    readparagraph(filestats, 1, 4);
+    
 
     while (end == false)
     {
+        /*Initializing Player and Zombie Settings*/
+        player.pv = 100;
+        zombie.pv = 20;
+        
+        print_stats(filestats, language, &player);
+        readparagraph(filestats, 1, 4);
+
         snprintf(fileName, sizeof(fileName), "%s/chap1.txt", language);
-        chap1(fileName, &player, &zombie, end);
+        chap1(fileName, filestats, language, &player, &zombie, end);
         snprintf(fileName, sizeof(fileName), "%s/chap2.txt", language);
-        chap2(fileName, &player, end);
+        chap1(fileName, filestats, language, &player, &zombie, end);
     }
     
     return 0;
