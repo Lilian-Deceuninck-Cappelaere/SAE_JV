@@ -15,6 +15,13 @@ typedef struct {
     int tools;
 } character;
 
+void print_stats(character *player)
+{
+    printf("%s", player->name);
+    printf("%d", player->pv);
+    printf("")
+}
+
 
 void readLine(const char *fileName, int lineNumber)
 /*Read the line number lineNumber*/

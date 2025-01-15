@@ -18,42 +18,43 @@ You have won
 
 You have lost, try again!
 
-Congrats! You’re inside! Now you realise how damaged the IUT is… 
+Congrats! You’re Inside in hall of IUT ! Now you realise how damaged the IUT is.
 You need to clean up everything before starting to rebuild it… 
 Pay attention, rubble can hide useful stuff but also dangerous things. 
 Keep your eyes open. To clean up, you need tools. They might be in the shops…
 
 ********** New quest: find the tools. **********
 
-To find the tools, you must roll a 6-sided dice. The result must be 4 or higher. Press the key (1)
+To find the tools, you must roll a 6-sided dice. The result must be 5 or higher. Press the key (1)
 
 Your roll:
 
 Congratulations! You found the Tools and a strange weapon, a graphics card launcher.
 
-A zombie approaches. Press the key (1)
-
- attack : 
-Zombie attack :
-
- hp : 
-Zombie hp :
-
-You found keys on the zombie's body. (****End temporary****)
-To get health points, you must…
-
-You return inside the building it might be safer than outside… 
-You’re now inside the building, in the hall
-What do you want to do?
-Visit the building
-Start to clean up
+What do you want to do : 
+  1- Visit the IUT 
+  2- Start clearing
 
 
+(If the user chooses to start clearing:) 
+A zombie approaches, it attacks you, defend yourself! Press the key (1)
 
-(If users choose to clean up :)
-You’re clearing the IUT’s hall from its rubble. You’re suddenly attacked by a zombie. You are continuing your work. You find a safe locked by a code and a piece of paper with the number seven on it…
-You finished clearing the hall and new doors are accessible. You can visit new rooms, but you never know what there is behind the doors… 
+ attack: 
+Zombie attack:
 
-(If users choose to visit before cleaning :)
+ HP: 
+Zombie HP:
 
-You’re visiting the hall. You fall into a trap, and you lose 5 health points. You find out that doors are blocked by the rubble. You must clear it before proceeding further…
+You have found keys on the zombie's body.
+You’re clearing the IUT’s hall from its rubble.
+You discover a safe locked by a code. 
+You also find a piece of paper containing the number 7. 
+You have cleared new doors. 
+You can now visit other rooms thanks to the keys. 
+But be wary of what you find behind the doors...
+
+(If the user chooses to visit before clearing:)
+You visit the hall.
+You fall into a trap and lose 20 health points.
+You notice that the doors are blocked by debris.
+You must remove them before continuing, go clear!
