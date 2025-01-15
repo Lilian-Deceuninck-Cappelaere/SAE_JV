@@ -46,7 +46,7 @@ Zombie attaque :
 Zombie pv :
 
 Vous avez trouvé des clés sur le corps du zombie.
-Vous déblayer les dégâts.
+Vous déblayer les dégâts du hall de l'IUT.
 Vous découvrez un coffre-fort verrouillé par un code. 
 Vous trouvez également un morceau de papier qui contient le chiffre 7.
 Vous avez déblayé de nouvelles portes.
@@ -54,9 +54,9 @@ Vous pouvez ainsi visiter d’autres pièces grâce aux clés.
 Mais prenez garde à ce que vous trouverez derrière les portes…
 
 (Si l’utilisateur choisi de visiter avant de déblayer :)
-Vous visitez le hall. 
-Vous tombez sur un piège et vous perdez 20 points de vie. 
-Vous constatez que les portes sont bloquées par les décombres. 
+Vous visitez le hall.
+Vous tombez sur un piège et vous perdez 20 points de vie.
+Vous constatez que les portes sont bloquées par les décombres.
 Vous devez les retirer avant de continuer aller déblayer !
 
 
