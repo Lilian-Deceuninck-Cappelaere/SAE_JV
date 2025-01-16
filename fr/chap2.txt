@@ -15,6 +15,12 @@ Puis vous remettrez l’IUT en bon état.
 
 
 
+Vous avez assez de matériel en stock pour restaurer la salle de TP. Vous utilisez des câbles, quelques ordinateurs, du matériel informatique et du mobilier provenant de vos stocks.
+Il ne reste que quelques ordinateurs, meubles et matériaux dans votre stock. Vous devez vous réapprovisionner. Pour cela, vous irez récupérer les éléments manquants dans des magasins et autres bâtiments abandonnés. Vous pouvez demander à vos amis de GEII de réparer les ordinateurs abîmés. 
+Vous décidez de traverser la ville désolée pour vous rendre dans un magasin de bricolage. L’entrée était piégée. Vous vous en êtes rendu compte avant de vous faire piéger. Vous le désamorcez et vous vous blessez légèrement. Vous perdez 2hp. Vous obtenez tous les matériaux nécessaires ainsi que des câbles de cuivre.
+Pendant que vous restaurez la bibliothèque, vous trouvez un message gravé dans un vieux mur. Vous lisez : Il y a potentiellement quelque chose d’utile pour vous dans les tiroirs du bureau…
+Vous arrêtez ce que vous êtes en train de faire et vous vous précipitez vers le bureau. Les tiroirs sont fermés par un verrou. Vous vous rendez compte que vous avez des clés en plus dans votre poche. Vous tentez d’ouvrir les tiroirs.
+Vous trouvez un annuaire contenant les noms de professeurs et leurs adresses.
 
 
 
