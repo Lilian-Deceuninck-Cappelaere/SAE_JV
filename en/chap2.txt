@@ -18,9 +18,33 @@ You also must ask your friends from GEII to rebuild the out of service computers
 You decide to cross the desolated city to go to an abandoned hardware store. 
 The entrance was booby-trapped. You realized it before getting trapped. 
 While disengaging it you get slightly hurt and you lose 2 HP. 
-You get all the materials and some cooper cables.
+You get all the materials and some copper cables.
 
 While restoring the library, you find note engraved into an old wall. It says: there might be something useful for you in the office drawers…
 You quit what you are doing, and you rush to the office. A lock enables you to open the drawers. You realize that you still have some spare keys. You try to unlock the drawers with the keys. 
 You find a book containing a directory with teacher’s names and their addresses.
+You’ll use the directory later. Stocks are getting low on copper cables…
 
+
+
+
+
+You decide to get out of the IUT to get cables.
+You remind of place where you could get cables. The Alcatel plant.
+As you arrive, you see how overgrown and derelict the place is.
+You find a shovel and you start to dig up some cable
+You throw a 6 faced dice. The obtained result must be superior or equal to five. Press 1 on your keyboard.
+The result:
+Congratulations! You’ve found cables, and you decide to head back to the IUT and drop them off.
+Computer equipment is missing. You’re going to the city centre of Calais; there’s a computer science store down there. In the store, you face looters.
+They’re offering you to play paper, scissors, stone in 3 rounds to obtain your computer equipment.
+What do you want to do?
+1-Stone
+2-Paper
+3-Scissors
+
+It’s a tie
+
+You won the round.
+
+Looter won the round

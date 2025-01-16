@@ -73,7 +73,7 @@ Where do you want to go?
 (If player wants to go to computers room)
 You are in the computers room. Room has been vandalized. 
 Computers, tables, chairs and trash litters the floor. 
-You find a pile of cooper cables in one corner of the room. 
+You find a pile of copper cables in one corner of the room. 
 Out of service computers, furniture in mint condition and cables are added to your inventory.
 You are putting the room in order.
 
