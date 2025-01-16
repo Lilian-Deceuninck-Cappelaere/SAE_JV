@@ -257,9 +257,37 @@ void paper_scissors_stone(char *fileName)
     {
         readLine(fileName, 66);
     }
-    
-    
 }
+
+void enigma(char *fileName)
+/*A enigma*/
+{
+    char word[50];
+    int i;
+    bool find;
+
+    i = 0;
+    find = false;
+    do
+    {
+        readLine(fileName, 73);
+        scanf("%s", word);
+        printf("\n");
+
+        if ((strcmp(strlwr(word), "silence") == 0) || (strcmp(strlwr(word), "quiet") == 0))
+        {
+            readLine(fileName, 75);
+            printf("\n");
+            find = true;
+        }
+        else
+        {
+            readLine(fileName, 77);
+            i++;
+        }
+    } while (!find && i < 2);
+}
+
 
 void intro(char *fileName, character *player)
 /*Introduction of the game*/
@@ -408,7 +436,6 @@ void chap2(char *fileName, char *filestats, char *language, character *player, c
     {
         printf("\n\n");
     }
-
     readparagraph(fileName, 15, 31);
     player->pv -= 2;
 
@@ -418,9 +445,16 @@ void chap2(char *fileName, char *filestats, char *language, character *player, c
         readparagraph(fileName, 39, 43);
         roll_dice(language);
         readLine(fileName, 46);
+        printf("\n");
     }
+    readLine(fileName, 47);
+    printf("\n");
     readparagraph(fileName, 48, 51);
     paper_scissors_stone(fileName);
+
+    readparagraph(fileName, 69, 72);
+    enigma(fileName);
+    readparagraph(fileName, 79, 91);
 }
 
 int main(int argc, char *argv[])

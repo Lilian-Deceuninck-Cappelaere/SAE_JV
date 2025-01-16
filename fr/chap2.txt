@@ -44,7 +44,7 @@ Vous lancez un dé de 6, le résultat obtenu doit être supérieur ou égal à 5
 
 
 Félicitations ! Vous avez trouvé des câbles et décidez de retourner à l'IUT pour les déposer.
-**** Quête accomplie : trouver les matériaux ****
+********** Quête accomplie : trouver les matériaux **********
 Il manque aussi du matériel informatique. Vous partez à sa recherche en vous rendant à un magasin informatique dans le centre de Calais. 
 En rentrant dans le magasin vous faites la rencontre de pillards.
 
@@ -66,14 +66,26 @@ Vous remportez le jeu et retournez à l'IUT avec le matériel informatique.
 Le pillard remporte le jeu. Mais sur le chemin du retour vous trouvez le matériel informatique que vous recherchez dans un autre magasin abandonné.
 
 
-Vous continuez les réparations des autres salles grâce au matériel que vous avez pu récupérer. Le mobilier manque et vous devez toujours appeler vos amis de GEII pour vous aider à réparer les ordinateurs abîmés.
+Vous continuez les réparations des autres salles grâce au matériel que vous avez pu récupérer. 
+Le mobilier manque et vous devez toujours appeler vos amis de GEII pour vous aider à réparer les ordinateurs abîmés.
 Ils vous aideront volontiers si vous répondez à cette énigme : 
-Me prononcer me rompt
-Après de nombreux efforts, vous et vos amis avez réussi à remettre en marche les ordinateurs.
-Quête accomplie : trouver l’équipement informatique
-Vous partez en quête de mobilier. Quelques rues au-delà, vous trouvez un magasin de mobilier qui avait ouvert peu avant l’apocalypse… Vous trouvez meubles, bureaux, chaises et tables dont vous avez besoin.
-Après des heures passées à suivre des notices de montage peu claires, les salles se voient garnies de mobilier et sont presque prêtes. Il ne manque plus que les ordinateurs, que vous installez dans la foulée.
-Félicitations ! Vous avez accompli votre mission.
-Quête accomplie : restaurer l’IUT
-Vous rappelez ensuite les professeurs grâce à l’annuaire. Après de nombreuses lettres, vous arrivez à reformer l’équipe pédagogique au grand complet !
 
+Me prononcer me rompt
+
+Trouvé !
+
+Indice : chut
+
+Après de nombreux efforts, vous et vos amis avez réussi à remettre en marche les ordinateurs.
+
+********** Quête accomplie : trouver l’équipement informatique **********
+Vous partez en quête de mobilier. 
+Quelques rues au-delà, vous trouvez un magasin de mobilier qui avait ouvert peu avant l’apocalypse… 
+Vous trouvez meubles, bureaux, chaises et tables dont vous avez besoin.
+Après des heures passées à suivre des notices de montage peu claires, les salles se voient garnies de mobilier et sont presque prêtes. 
+Il ne manque plus que les ordinateurs, que vous installez dans la foulée.
+Félicitations ! Vous avez accompli votre mission.
+
+********** Quête accomplie : restaurer l’IUT **********
+
+Vous rappelez ensuite les professeurs grâce à l’annuaire. Après de nombreuses lettres, vous arrivez à reformer l’équipe pédagogique au grand complet !
