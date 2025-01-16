@@ -71,19 +71,39 @@ Où souhaitez-vous aller ?
 
 
 (Si l’utilisateur choisit d’aller dans la salle informatique :)
-Vous êtes dans la salle informatique. La salle a été saccagée. Les ordinateurs, tables, chaises et déchets jonchent le sol. Dans, un coin vous trouvez un amoncellement de câbles en cuivres. Les ordinateurs abimés, les meubles en bon état et les câbles sont ajoutés à votre inventaire. Vous remettez en ordre la salle.
+Vous êtes dans la salle informatique. La salle a été saccagée. 
+Les ordinateurs, tables, chaises et déchets jonchent le sol. 
+Dans, un coin vous trouvez un amoncellement de câbles en cuivres. 
+Les ordinateurs abimés, les meubles en bon état et les câbles sont ajoutés à votre inventaire. 
+Vous remettez en ordre la salle.
+
 (Si le joueur choisit d’aller dans la salle de TP :)
-Vous visitez la salle de TP. La salle contient quelques ordinateurs. Suprêmement, les ordinateurs ont l’air d’être en état de marche. Vous retirez les papiers amassés sur le sol et vous découvrez un morceau de papier présentant le chiffre 3. Vous nettoyez la salle, un objet tranchant vous blesse légèrement. Vous perdez 5 PV. Vous trouvez également du matériel informatique en bon état. Les ordinateurs, le matériel et le morceau de papier s’ajoutent à votre inventaire.
+Vous visitez la salle de TP. 
+La salle contient quelques ordinateurs. 
+Suprêmement, les ordinateurs ont l’air d’être en état de marche. 
+Vous retirez les papiers amassés sur le sol et vous découvrez un morceau de papier présentant le chiffre 3. 
+Vous nettoyez la salle, un objet tranchant vous blesse légèrement. Vous perdez 5 PV. 
+Vous trouvez également du matériel informatique en bon état. 
+Les ordinateurs, le matériel et le morceau de papier s’ajoutent à votre inventaire.
 
 (Si le joueur choisit de visiter la salle de TD)
-Vous entrez dans la salle de TD. Vous commencez à retirer des décombres dans la salle. Un zombie surgit et vous attaque. Vous trouvez d’autres ordinateurs à réparer. Ils s’ajoutent à votre inventaire.
+Vous entrez dans la salle de TD. 
+Vous commencez à retirer des décombres dans la salle. 
+Un zombie surgit et vous attaque.
+Vous trouvez d’autres ordinateurs à réparer. Ils s’ajoutent à votre inventaire.
 
 (Si le joueur choisit le bureau de Mr. Synave)
 La porte est verrouillée… il faut trouver la clé…
+
 (Si le joueur choisit d’aller à la bibliothèque)
-Vous entrez dans la bibliothèque. La salle a été quelque peu chamboulée. Vous trouvez une pile de papiers. Vous retrouvez une feuille avec le chiffre 1 inscrit dessus.
+Vous entrez dans la bibliothèque. La salle a été quelque peu chamboulée. 
+Vous trouvez une pile de papiers. 
+Vous retrouvez une feuille avec le chiffre 1 inscrit dessus.
+
 (Si le joueur a les trois numéros en sa possession)
-Félicitations, vous avez obtenu les trois numéros ! Vous pouvez peut-être tenter d’ouvrir le coffre-fort…
+Félicitations, vous avez obtenu les trois numéros ! Vous pouvez tenter d’ouvrir le coffre-fort…
+
+Votre code : 
 
 La combinaison n’est pas bonne. Réessayez !
 Félicitations, vous avez réussi à ouvrir le coffre-fort !

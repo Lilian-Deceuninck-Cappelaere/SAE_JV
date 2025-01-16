@@ -227,8 +227,8 @@ void intro(char *fileName, character *player)
 void chap1(char *fileName, char *filestats, char *language, character *player, character *zombie, int end)
 /*Chapter 1 of the game*/
 {
-    int key, action, i, room;
-    bool computer, td, tp, Synave, library;
+    int key, action, i, room, code;
+    bool computer, td, tp, Synave, library, password;
 
     printf("\n");
     readLine(fileName, 1);
@@ -279,41 +279,76 @@ void chap1(char *fileName, char *filestats, char *language, character *player, c
         }
     }
 
-    // while ((!computer) && (!td) && (!tp) && (!Synave) && (!library))
-    // {
-    //     readparagraph(fileName, 64, 70);
-    //     scanf("%d", room);
-    //     switch (room)
-    //     {
-    //     case 1:
-            
-    //         break;
+    computer = false;
+    td = false;
+    tp = false;
+    Synave = false; 
+    library = false;
 
-    //     case 2:
+    while ((!computer) && (!td) && (!tp) && (!Synave) && (!library))
+    {
+        printf("\n");
+        readparagraph(fileName, 64, 70);
+        scanf("%d", &room);
+        switch (room)
+        {
+        case 1:
+            readparagraph(fileName, 74, 78);
+            computer = true;
+            break;
 
-    //         break;
+        case 2:
+            readparagraph(fileName, 81, 87);
+            player->pv -= 5;
+            td = true;
+            break;
 
-    //     case 3:
+        case 3:
+            readparagraph(fileName, 90, 92);
+            zombie->pv = 20;
+            fight(fileName, player, zombie, end);
+            readLine(fileName, 93);
+            tp = true;
+            break;
 
-    //         break;
+        case 4:
+            readLine(fileName, 96);
+            Synave = true;
+            break;
 
-    //     case 4:
+        case 5:
+            readparagraph(fileName, 99, 101);
+            library = true;
+            break;
 
-    //         break;
+        default:
+            break;
+        }
+    }
 
-    //     case 5:
+    readLine(fileName, 104);
+    password = false;
+    while (!password)
+    {
+        readLine(fileName, 106);
+        scanf("%d", &code);
 
-    //         break;
+        if (code == 371)
+        {
+            readLine(fileName, 109);
+            password = true;
+        }
 
-    //     default:
-    //         break;
-    //     }
-    // }
+        else
+        {
+            readLine(fileName, 108);
+        }
+        
+    }
     
     {
         readparagraph(fileName, 64, 70);
     }
-        
 }
 
 // void chap2(char *fileName, character *player, int end)
