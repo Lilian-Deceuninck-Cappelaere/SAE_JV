@@ -84,3 +84,11 @@ Mr. Synave office seems to be locked… you must find the key.
 You’re entering the library; the room is a mess… You search a pile of papers and find a piece of paper with the number one on it.
 (If player got all the 3 numbers)
 Congrats! You got all the 3 numbers… You might be able to open the safe…
+
+Wrong combination. Try again!
+Right combination!
+
+
+You find a key…
+(End of first chapter)
+

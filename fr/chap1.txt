@@ -108,3 +108,5 @@ Votre code :
 La combinaison n’est pas bonne. Réessayez !
 Félicitations, vous avez réussi à ouvrir le coffre-fort !
 
+Vous trouvez une clé…
+(Fin du chapitre 1)
