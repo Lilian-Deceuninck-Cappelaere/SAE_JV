@@ -445,8 +445,8 @@ int main(int argc, char *argv[])
     readparagraph(filestats, 1, 4);
     printf("\n");
 
-    snprintf(fileName, 13, "%s/chap1.txt", language);
-    chap1(fileName, filestats, language, &player, &zombie);
+    // snprintf(fileName, 13, "%s/chap1.txt", language);
+    // chap1(fileName, filestats, language, &player, &zombie);
 
     snprintf(fileName, 13, "%s/chap2.txt", language);
     chap2(fileName, filestats, language, &player, &zombie);
