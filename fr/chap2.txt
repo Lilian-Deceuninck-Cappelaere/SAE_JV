@@ -44,7 +44,7 @@ Vous lancez un dé de 6, le résultat obtenu doit être supérieur ou égal à 5
 
 
 Félicitations ! Vous avez trouvé des câbles et décidez de retourner à l'IUT pour les déposer.
-Quête accomplie : trouver les matériaux
+**** Quête accomplie : trouver les matériaux ****
 Il manque aussi du matériel informatique. Vous partez à sa recherche en vous rendant à un magasin informatique dans le centre de Calais. 
 En rentrant dans le magasin vous faites la rencontre de pillards.
 
