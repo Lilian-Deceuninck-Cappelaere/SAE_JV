@@ -472,7 +472,7 @@ int main(int argc, char *argv[])
     character zombie;
 
     select_language(language);
-    snprintf(fileName, sizeof(fileName), "%s/intro.txt", language);
+    snprintf(fileName, 13, "%s/intro.txt", language);
     intro(fileName, &player);
     
 
