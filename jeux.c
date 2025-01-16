@@ -180,7 +180,7 @@ void guess_the_number(char *fileName)           /*A mini game to find a number*/
 
 }
 
-bool fight(char *fileName, character *player, character *zombie, bool end) 
+void fight(char *fileName, character *player, character *zombie) 
 /*Fight between the player and the zombie*/
 {
     int playerAttack, zombieAttack;
@@ -206,13 +206,6 @@ bool fight(char *fileName, character *player, character *zombie, bool end)
         sleep(3);
         printf("\n");                       /*Stopt 4 sec execution*/
     }
-    
-    if (player->pv == 0)
-    {
-        end = true;
-    }    
-
-    return end;
 }
 
 void intro(char *fileName, character *player)
@@ -224,7 +217,7 @@ void intro(char *fileName, character *player)
     scanf("%s", &player->name);
 }
 
-void chap1(char *fileName, char *filestats, char *language, character *player, character *zombie, int end)
+void chap1(char *fileName, char *filestats, char *language, character *player, character *zombie)
 /*Chapter 1 of the game*/
 {
     int key, action, i, room, code;
@@ -269,7 +262,7 @@ void chap1(char *fileName, char *filestats, char *language, character *player, c
                 print_stats(filestats, language, player);
                 readparagraph(filestats, 1, 4);
                 printf("\n");
-                fight(fileName, player, zombie, end);
+                fight(fileName, player, zombie);
             }
             readparagraph(fileName, 48, 54);
             i = 1;
@@ -307,7 +300,7 @@ void chap1(char *fileName, char *filestats, char *language, character *player, c
         case 3:
             readparagraph(fileName, 90, 92);
             zombie->pv = 20;
-            fight(fileName, player, zombie, end);
+            fight(fileName, player, zombie);
             readLine(fileName, 93);
             tp = true;
             break;
@@ -339,7 +332,6 @@ void chap1(char *fileName, char *filestats, char *language, character *player, c
             printf("\n");
             readparagraph(fileName, 109, 111);
             password = true;
-            end = true;
             printf("\n");
         }
 
@@ -350,42 +342,39 @@ void chap1(char *fileName, char *filestats, char *language, character *player, c
     }
 }
 
-// void chap2(char *fileName, character *player, int end)
-// /*Chapter 2 of the game*/
-// {
-
-// }
+void chap2(char *fileName, char *filestats, char *language, character *player, character *zombie)
+/*Chapter 2 of the game*/
+{
+    readparagraph(fileName, 1, 12);
+}
 
 int main(int argc, char *argv[])
 {
     char language[3], fileName[13], filestats[13];
     int action, i, j;
-    bool end;
+
     character player;
     character zombie;
-    
-    end = false;
 
     select_language(language);
     snprintf(fileName, sizeof(fileName), "%s/intro.txt", language);
     intro(fileName, &player);
     
 
-    while (end == false)
-    {
-        /*Initializing Player and Zombie Settings*/
-        player.pv = 100;
-        zombie.pv = 20;
+    /*Initializing Player and Zombie Settings*/
+    player.pv = 100;
+    player.tools = 0;
+    zombie.pv = 20;
 
-        print_stats(filestats, language, &player);
-        readparagraph(filestats, 1, 4);
-        printf("\n");
+    print_stats(filestats, language, &player);
+    readparagraph(filestats, 1, 4);
+    printf("\n");
 
-        snprintf(fileName, 13, "%s/chap1.txt", language);
-        chap1(fileName, filestats, language, &player, &zombie, end);
-        snprintf(fileName, 13, "%s/chap2.txt", language);
-        // chap2(fileName, filestats, language, &player, &zombie, end);
-    }
+    // snprintf(fileName, 13, "%s/chap1.txt", language);
+    // chap1(fileName, filestats, language, &player, &zombie);
+    snprintf(fileName, 13, "%s/chap2.txt", language);
+    chap2(fileName, filestats, language, &player, &zombie);
+    
     
     return 0;
 }

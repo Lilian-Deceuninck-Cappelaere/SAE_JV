@@ -1,8 +1,12 @@
 The first part of your adventure has been completed…
-You visited every IUT’s rooms expected Mr. Synave’s office. You got some keys. One of them might open this room’s door.
-You try the keys, and one of them opens the door. The office is in good condition, you won’t have to do anything in this room… for the moment at least.
+You visited every IUT’s rooms expected Mr. Synave’s office. 
+You got some keys. One of them might open this room’s door.
+You try the keys, and one of them opens the door. 
+The office is in good condition, you won’t have to do anything in this room… for the moment at least.
 Since you visited everything, you now must get to work and start refurbishing all rooms.  
 In this second part, you will have to find all the materials, equipment to get the IUT in pristine conditions.
-New quest: Find the materials
-New quest: Find equipments
-New quest: Restore the IUT.
+
+
+********** New quest: Find the materials **********
+**********  New quest: Find equipments   **********
+**********  New quest: Restore the IUT.  **********
