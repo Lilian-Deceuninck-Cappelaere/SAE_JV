@@ -64,8 +64,8 @@ Vous devez les retirer avant de continuer aller déblayer !
 Vous pouvez donc accéder à de nouvelles pièces.
 Où souhaitez-vous aller ?
   1- Salle informatique
-  2- Salle de TD
-  3- Salle de TP
+  2- Salle de TP
+  3- Salle de TD
   4- Bureau de Mr Synave
   5- Bibliothèque
 
@@ -107,4 +107,3 @@ Votre code :
 
 La combinaison n’est pas bonne. Réessayez !
 Félicitations, vous avez réussi à ouvrir le coffre-fort !
-

@@ -15,6 +15,13 @@ typedef struct {
     int tools;
 } character;
 
+typedef struct
+{ /*object strucute, contains object name, object type and quantity*/
+    char name[40];
+    char type[40];
+    int quantity;
+} object;
+
 void print_stats(char *filestats, char *language, character *player)
 {
     snprintf(filestats, 13, "%s/stats.txt", language);
@@ -285,7 +292,7 @@ void chap1(char *fileName, char *filestats, char *language, character *player, c
     Synave = false; 
     library = false;
 
-    while ((!computer) && (!td) && (!tp) && (!Synave) && (!library))
+    while ((!computer) || (!td) || (!tp) || (!Synave) || (!library))
     {
         printf("\n");
         readparagraph(fileName, 64, 70);
@@ -335,19 +342,17 @@ void chap1(char *fileName, char *filestats, char *language, character *player, c
 
         if (code == 371)
         {
+            printf("\n");
             readLine(fileName, 109);
             password = true;
+            end = true;
+            printf("\n");
         }
 
         else
         {
             readLine(fileName, 108);
         }
-        
-    }
-    
-    {
-        readparagraph(fileName, 64, 70);
     }
 }
 

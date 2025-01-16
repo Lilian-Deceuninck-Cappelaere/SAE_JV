@@ -1,5 +1,5 @@
 Thank you for joining this thriving adventure.
-Before doing anything in the IUT, you need to enter the building.
+ before doing anything in the IUT, you need to enter the building.
 Sadly, the main entrance is blocked for an unknown reason.
 You have just found a safe entrance.
 But you need to unlock the door first. 
@@ -64,23 +64,47 @@ You must remove them before continuing, go clear!
 You can visit new rooms.
 Where do you want to go?
   1- Computer room
-  2- Tutorial room (check word)
-  3- Practical Work Room (check word)
+  2- Practical Work Room (check word)
+  3- Tutorial room (check word)
   4- Mr Synave’s office
   5- Library
 
+
 (If player wants to go to computers room)
-You are in the computers room. Room has been vandalized. Computers, tables, chairs and trash litters the floor. You find a pile of cooper cables in one corner of the room. Out of service computers, furniture in mint condition and cables are added to your inventory. 
+You are in the computers room. Room has been vandalized. 
+Computers, tables, chairs and trash litters the floor. 
+You find a pile of cooper cables in one corner of the room. 
+Out of service computers, furniture in mint condition and cables are added to your inventory.
+You are putting the room in order.
 
 (If player selects tutorial room)
-You’re visiting the tutorial room. A few computers are presents in the room. Surprisingly, computers seem to be in working condition. While cleaning the room’s floor, you discover a piece of paper marked with number 3. You get slightly injured in the process by hitting a sharp object. You lose 5hp. You also discover computer equipment in good condition. Computers, equipment and the piece of paper is added to your inventory.
+You’re visiting the tutorial room. 
+A few computers are presents in the room. 
+Surprisingly, computers seem to be in working condition. 
+While cleaning the room’s floor, you discover a piece of paper marked with number 3. 
+You get slightly injured in the process by hitting a sharp object. You lose 5 hp. 
+You also discover computer equipment in good condition. 
+Computers, equipment and the piece of paper is added to your inventory.
 
 (If player wants to visit practice work room)
-You’re entering the practice work room. You are starting to clean up the rubble. A zombie suddenly appears and attacks you. You beat him. There’s out of service computers in the classroom. They’re added to your inventory.
+You’re entering the practice work room. 
+You are starting to clean up the rubble. 
+A zombie suddenly appears and attacks you. 
+There’s out of service computers in the classroom. They’re added to your inventory.
 
 (If players want to go to Mr. Synave office)
 Mr. Synave office seems to be locked… you must find the key.
+
 (If players head to the library)
-You’re entering the library; the room is a mess… You search a pile of papers and find a piece of paper with the number one on it.
+You’re entering the library; the room is a mess… 
+You search a pile of papers.
+You find a piece of paper with the number 1 on it.
+
 (If player got all the 3 numbers)
 Congrats! You got all the 3 numbers… You might be able to open the safe…
+
+Your code : 
+
+The combination is not good. Try again!
+Congratulations, you have managed to open the safe!
+
