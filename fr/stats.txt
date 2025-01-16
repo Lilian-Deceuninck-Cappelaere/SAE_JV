@@ -1,4 +1,0 @@
-**** Vos statistiques ****
-	Nom : Linux
-	Points de vie : 100
-	Points d'attaque outils : 0
