@@ -20,5 +20,7 @@ The entrance was booby-trapped. You realized it before getting trapped.
 While disengaging it you get slightly hurt and you lose 2 HP. 
 You get all the materials and some cooper cables.
 
-While restoring
+While restoring the library, you find note engraved into an old wall. It says: there might be something useful for you in the office drawers…
+You quit what you are doing, and you rush to the office. A lock enables you to open the drawers. You realize that you still have some spare keys. You try to unlock the drawers with the keys. 
+You find a book containing a directory with teacher’s names and their addresses.
 
