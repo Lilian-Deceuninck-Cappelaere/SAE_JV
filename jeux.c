@@ -15,13 +15,6 @@ typedef struct {
     int tools;
 } character;
 
-typedef struct
-{ /*object strucute, contains object name, object type and quantity*/
-    char name[40];
-    char type[40];
-    int quantity;
-} object;
-
 void print_stats(char *filestats, char *language, character *player)
 {
     snprintf(filestats, 13, "%s/stats.txt", language);
@@ -252,6 +245,7 @@ void chap1(char *fileName, char *filestats, char *language, character *player, c
     {
         roll_dice(fileName);
     }
+    printf("\n");
     player->tools = 3;
     printf("\n");
     readparagraph(fileName, 34, 36);
