@@ -10,3 +10,39 @@ Puis vous remettrez l’IUT en bon état.
 **********       Nouvelle quête : trouvez les matériaux       **********
 ********** Nouvelle quête : trouvez l’équipement informatique **********
 **********          Nouvelle quête : Restaurez l’IUT          **********
+
+
+
+
+
+
+
+
+
+
+
+Vous décidez de sortir de l'IUT pour aller chercher des câbles.
+Vous vous souvenez qu'une usine de câbles était présente à Calais avant l'apocalypse sous le nom d'Alcatel.
+En arrivant sur place vous constaté que le bâtiment est dans un état de dégradation plus important que l'IUT.
+Vous trouvez une pelle est essayez de déterré des câbles. 
+Vous lancer un dès de 6 le résultat obtenu doit être supérieur ou égal à 5. Appuyer sur la touche (1)
+
+Votre lancer :
+
+Félicitations ! Vous avez trouvé des câbles et décidez de retourner à l'IUT pour les déposer.
+
+IL manque aussi du matériel informatique. Vous partez à sa recherche en vous rendant à un magasin informatique dans le centre de Calais. En rentrant dans le magasin vous faites la rencontres de pillards.
+
+Ils vous propose de jouer à pierre, feuille, ciseaux en 3 manches pour obtenir votre matériel informatique.
+
+Que souhaitez-vous faire :
+  1- Pierre
+  2- Feuille
+  3- Ciseaux
+
+Egalité
+
+Vous remporter la manche.
+
+Le pillard remporte la manche.
+
