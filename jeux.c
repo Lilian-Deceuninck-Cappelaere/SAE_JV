@@ -457,6 +457,12 @@ void chap2(char *fileName, char *filestats, char *language, character *player, c
     readparagraph(fileName, 79, 92);
 }
 
+void chap3(char *fileName, character player)
+{
+    printf("\n%s", player.name);
+    readparagraph(fileName, 1, 4);
+}
+
 int main(int argc, char *argv[])
 {
     char language[3], fileName[13], filestats[13];
@@ -485,8 +491,8 @@ int main(int argc, char *argv[])
     snprintf(fileName, 13, "%s/chap2.txt", language);
     chap2(fileName, filestats, language, &player, &zombie);
 
-    // snprintf(fileName, 13, "%s/chap3.txt", language);
-    // chap3(fileName, filestats, language, &player, &zombie);
+    snprintf(fileName, 13, "%s/chap3.txt", language);
+    chap3(fileName, player);
 
     return 0;
 }
