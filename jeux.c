@@ -343,7 +343,7 @@ void chap1(char *fileName, char *filestats, char *language, character *player, c
         if (code == 371)
         {
             printf("\n");
-            readLine(fileName, 109);
+            readparagraph(fileName, 109, 111);
             password = true;
             end = true;
             printf("\n");
