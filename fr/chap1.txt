@@ -60,16 +60,11 @@ Vous constatez que les portes sont bloquées par les décombres.
 Vous devez les retirer avant de continuer aller déblayer !
 
 
-
-(Pour récupérer des points de vie vous devez…)
-
-
-
 (après que l'utilisateur ait déblayé)
 Vous pouvez donc accéder à de nouvelles pièces.
 Où souhaitez-vous aller ?
-Salle informatique
-Salle de TD
-Salle de TP
-Bureau de Mr Synave
-Bibliothèque
+  1- Salle informatique
+  2- Salle de TD
+  3- Salle de TP
+  4- Bureau de Mr Synave
+  5- Bibliothèque

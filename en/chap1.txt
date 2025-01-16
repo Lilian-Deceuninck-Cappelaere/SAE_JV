@@ -60,10 +60,11 @@ You notice that the doors are blocked by debris.
 You must remove them before continuing, go clear!
 
 
+(après que l'utilisateur ait déblayé)
 You can visit new rooms.
 Where do you want to go?
-Computer room
-Tutorial room (check word)
-Practical Work Room (check word)
-Mr Synave’s office
-Library
+  1- Computer room
+  2- Tutorial room (check word)
+  3- Practical Work Room (check word)
+  4- Mr Synave’s office
+  5- Library

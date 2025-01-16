@@ -17,10 +17,10 @@ typedef struct {
 
 void print_stats(char *filestats, char *language, character *player)
 {
-    snprintf(filestats, sizeof(filestats), "%s/stats.txt", language);
+    snprintf(filestats, 13, "%s/stats.txt", language);
     FILE *file = fopen(filestats, "w");
 
-    if ((strcmp(language, "fr") == 0) || (strcmp(language, "FR") == 0) || (strcmp(language, "Fr") == 0) || (strcmp(language, "fR") == 0))
+    if (strcmp(language, "fr") == 0)
     {
         fprintf(file, "**** Vos statistiques ****\n\tNom : %s\n\tPoints de vie : %d\n\tPoints d'attaque outils : %d", player->name, player->pv, player->tools);
     }
@@ -138,7 +138,6 @@ int roll_dice(char *fileName)
 
 
 
-
 void guess_the_number(char *fileName)           /*A mini game to find a number*/
 {
     int numbertofind, counter, userinputnumber;
@@ -149,7 +148,7 @@ void guess_the_number(char *fileName)           /*A mini game to find a number*/
     counter = 10;
     numfound = false;
 
-    while ((numfound == false) && (counter > 0))
+    while ((!numfound) && (counter > 0))
     {
         readLine(fileName, 9);                  /*Read line 9 in file*/
         scanf("%d", &userinputnumber);
@@ -173,7 +172,7 @@ void guess_the_number(char *fileName)           /*A mini game to find a number*/
             printf("%d\n", counter);
         }
     }
-    if (counter == 0 && numfound == false)
+    if ((counter == 0) && (!numfound))
     {
         readLine(fileName, 19);
         guess_the_number(fileName);
@@ -225,10 +224,11 @@ void intro(char *fileName, character *player)
     scanf("%s", &player->name);
 }
 
-void chap1(char *fileName, char *filestats, char *language,  character *player, character *zombie, int end)
+void chap1(char *fileName, char *filestats, char *language, character *player, character *zombie, int end)
 /*Chapter 1 of the game*/
 {
-    int key, action, i;
+    int key, action, i, room;
+    bool computer, td, tp, Synave, library;
 
     printf("\n");
     readLine(fileName, 1);
@@ -254,6 +254,12 @@ void chap1(char *fileName, char *filestats, char *language,  character *player, 
         switch (action)
         {
         case 1:
+            readparagraph(fileName, 57, 61);
+            player->pv -= 20;
+            action = 2;
+            break;
+
+        case 2:
             readLine(fileName, 40);
             scanf("%d", &key);
             if (key == 1)
@@ -268,38 +274,57 @@ void chap1(char *fileName, char *filestats, char *language,  character *player, 
             i = 1;
             break;
 
-        case 2:
-            readparagraph(fileName, 57, 61);
-            player->pv -= 20;
-            print_stats(filestats, language, player);
-            readparagraph(filestats, 1, 4);
-            action = 1;
-            break;
-        
         default:
             break;
         }
     }
-    
-    
 
+    // while ((!computer) && (!td) && (!tp) && (!Synave) && (!library))
+    // {
+    //     readparagraph(fileName, 64, 70);
+    //     scanf("%d", room);
+    //     switch (room)
+    //     {
+    //     case 1:
+            
+    //         break;
 
-    if (end == false)
+    //     case 2:
+
+    //         break;
+
+    //     case 3:
+
+    //         break;
+
+    //     case 4:
+
+    //         break;
+
+    //     case 5:
+
+    //         break;
+
+    //     default:
+    //         break;
+    //     }
+    // }
+    
     {
-        readLine(fileName, 38);
-        end = true;
+        readparagraph(fileName, 64, 70);
     }
+        
 }
 
-void chap2(char *fileName, character *player, int end)
-/*Chapter 2 of the game*/
-{
+// void chap2(char *fileName, character *player, int end)
+// /*Chapter 2 of the game*/
+// {
 
-}
+// }
 
 int main(int argc, char *argv[])
 {
-    char language[3], fileName[20], filestats[20];
+    char language[3], fileName[13], filestats[13];
     int action, i, j;
     bool end;
     character player;
@@ -317,14 +342,15 @@ int main(int argc, char *argv[])
         /*Initializing Player and Zombie Settings*/
         player.pv = 100;
         zombie.pv = 20;
-        
+
         print_stats(filestats, language, &player);
         readparagraph(filestats, 1, 4);
+        printf("\n");
 
-        snprintf(fileName, sizeof(fileName), "%s/chap1.txt", language);
+        snprintf(fileName, 13, "%s/chap1.txt", language);
         chap1(fileName, filestats, language, &player, &zombie, end);
-        snprintf(fileName, sizeof(fileName), "%s/chap2.txt", language);
-        chap1(fileName, filestats, language, &player, &zombie, end);
+        snprintf(fileName, 13, "%s/chap2.txt", language);
+        // chap2(fileName, filestats, language, &player, &zombie, end);
     }
     
     return 0;
