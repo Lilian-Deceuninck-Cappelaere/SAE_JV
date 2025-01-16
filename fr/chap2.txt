@@ -88,4 +88,5 @@ Félicitations ! Vous avez accompli votre mission.
 
 ********** Quête accomplie : restaurer l’IUT **********
 
-Vous rappelez ensuite les professeurs grâce à l’annuaire. Après de nombreuses lettres, vous arrivez à reformer l’équipe pédagogique au grand complet !
+Vous rappelez ensuite les professeurs grâce à l’annuaire. 
+Après de nombreuses lettres, vous arrivez à reformer l’équipe pédagogique au grand complet !
