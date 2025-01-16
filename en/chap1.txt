@@ -108,3 +108,5 @@ Your code :
 The combination is not good. Try again!
 Congratulations, you have managed to open the safe!
 
+You find a key…
+(End of first chapter)
