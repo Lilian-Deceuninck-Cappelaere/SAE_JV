@@ -22,7 +22,7 @@ While disengaging it you get slightly hurt and you lose 2 HP.
 You get all the materials and some copper cables.
 
 While restoring the library, you find note engraved into an old wall. 
-It says: there might be something useful for you in the office drawers…
+It says: there might be something useful for you in the desk drawers…
 You quit what you are doing, and you rush to the office. 
 A lock enables you to open the drawers. 
 You realize that you still have some spare keys. You try to unlock the drawers with the keys. 
@@ -44,7 +44,7 @@ Press key (1) to see the rest.
 
 
 Congratulations! You’ve found cables, and you decide to head back to the IUT and drop them off.
-
+Achieved task: find the materials
 Computer equipment is missing. You’re going to the city centre of Calais, there’s a computer science store down there. 
 In the store, you face looters.
 
@@ -64,4 +64,16 @@ Looter won the round.
 You win the game and return to IUT with the computer equipment.
 
 The looter wins the game. But on the way back you find the computer equipment you are looking for in another abandoned store.
+
+Thanks to the materials you salvaged, you were able to refurbish other rooms. Furniture is still missing but have a plan. You also must call your friends from GEII, they can help you to repair the damaged computers.
+You call them. They tell you they’ll be happy to help if you answer this riddle.
+Pronouncing me breaks me
+After numerous efforts, your friends and you rebuilt every single computer.
+Achieved quest: find computer science equipment
+Finding furniture is your next job. A furniture store that opened shortly before the apocalypse is situated a few blocks away from the IUT. You decide to go to the abandoned store. You find, desks, chairs and tables that you needed.
+After a few hours of hard work, rooms are fitted with furniture. They’re almost ready. You install computers right after.
+Congratulations! You’ve completed your mission.
+Achieved quest: Restore the IUT 
+Thanks to the directory, you contact the teachers. After numerous letters, you’ve reassembled the entire teaching team!
+
 
