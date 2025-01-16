@@ -208,6 +208,55 @@ void fight(char *fileName, character *player, character *zombie)
     }
 }
 
+void paper_scissors_stone(char *fileName)
+/*Mini game : paper, scissors, stone*/
+{
+    int choice, winp, winl, looter;
+
+    winp = 0;
+    winl = 0;
+    
+    readLine(fileName, 37);
+    printf("\n");
+
+    do
+    {
+        readparagraph(fileName, 38, 42);
+        scanf("%d", &choice);
+        looter = Randomnum(1, 3);
+
+        if (choice == looter)
+        {
+            readLine(fileName, 43);
+        }
+
+        else if ((((choice == 1) && (looter == 3)) || ((choice == 2) && (looter == 1)) || ((choice == 3) && (looter == 2))))
+        {
+            readLine(fileName, 45);
+            winp++;
+        }
+
+        else
+        {
+            readLine(fileName, 47);
+            winl++;
+        }
+
+    } while ((winp != 3) && (winl != 3));
+    
+    if (winp == 3)
+    {
+        readLine(fileName, 49);
+    }
+
+    else
+    {
+        readLine(fileName, 51);
+    }
+    
+    
+}
+
 void intro(char *fileName, character *player)
 /*Introduction of the game*/
 {
@@ -346,6 +395,8 @@ void chap2(char *fileName, char *filestats, char *language, character *player, c
 /*Chapter 2 of the game*/
 {
     readparagraph(fileName, 1, 12);
+    paper_scissors_stone(fileName);
+    
 }
 
 int main(int argc, char *argv[])
