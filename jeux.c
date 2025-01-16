@@ -260,7 +260,7 @@ void paper_scissors_stone(char *fileName)
 }
 
 void enigma(char *fileName)
-/*A enigma*/
+/*A riddle*/
 {
     char word[50];
     int i;
@@ -454,7 +454,7 @@ void chap2(char *fileName, char *filestats, char *language, character *player, c
 
     readparagraph(fileName, 69, 72);
     enigma(fileName);
-    readparagraph(fileName, 79, 92);
+    readparagraph(fileName, 79, 93);
 }
 
 void chap3(char *fileName, character player)

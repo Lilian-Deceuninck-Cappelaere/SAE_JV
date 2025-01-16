@@ -25,7 +25,7 @@ Keep your eyes open. To clean up, you need tools. They might be in the shops…
 
 ********** New quest: find the tools. **********
 
-To find the tools, you must roll a 6-sided dice. The result must be 5 or higher. Press the key (1)
+To find the tools, you must roll a 6-sided dice. The result must be 4 or higher. Press the key (1)
 
 Your roll:
 

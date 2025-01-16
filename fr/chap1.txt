@@ -25,7 +25,7 @@ Gardez les yeux ouverts. Pour déblayer, il vous faut des outils. Ils sont peut-
 
 ********** Nouvelle quête : trouver les outils. **********
 
-Pour trouver les outils vous devez lancer un dès de 6 le résultat obtenu doit être supérieur ou égal à 5. Appuyer sur la touche (1)
+Pour trouver les outils vous devez lancer un dès de 6 le résultat obtenu doit être supérieur ou égal à 4. Appuyer sur la touche (1)
 
 Votre lancer :
 

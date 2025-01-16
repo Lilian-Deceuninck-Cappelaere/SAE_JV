@@ -40,7 +40,7 @@ Vous décidez de sortir de l'IUT pour aller chercher des câbles.
 Vous vous souvenez qu'une usine de câbles était présente à Calais avant l'apocalypse sous le nom d'Alcatel.
 En arrivant sur place vous constatez que le bâtiment est dans un état de dégradation plus avancé que l'IUT.
 Vous trouvez une pelle et essayez de déterrer des câbles. 
-Vous lancez un dé de 6, le résultat obtenu doit être supérieur ou égal à 5. Appuyez sur la touche (1)
+Vous lancez un dé de 6, le résultat obtenu doit être supérieur ou égal à 4. Appuyez sur la touche (1)
 
 
 Félicitations ! Vous avez trouvé des câbles et décidez de retourner à l'IUT pour les déposer.
@@ -79,6 +79,7 @@ Indice : chut
 Après de nombreux efforts, vous et vos amis avez réussi à remettre en marche les ordinateurs.
 
 ********** Quête accomplie : trouver l’équipement informatique **********
+
 Vous partez en quête de mobilier. 
 Quelques rues au-delà, vous trouvez un magasin de mobilier qui avait ouvert peu avant l’apocalypse… 
 Vous trouvez meubles, bureaux, chaises et tables dont vous avez besoin.
