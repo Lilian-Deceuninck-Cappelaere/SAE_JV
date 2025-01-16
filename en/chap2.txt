@@ -10,3 +10,10 @@ In this second part, you will have to find all the materials, equipment to get t
 ********** New quest: Find the materials **********
 **********  New quest: Find equipments   **********
 **********  New quest: Restore the IUT.  **********
+
+You have enough items to restore the tutorial room. You’re using cables, computers, computer equipment and furniture from your stocks. 
+Only a few of each item remains in your stock. You will have to recuperate stuff in some abandoned store. You also must ask your friends from GEII to rebuild the out of service computers. 
+You decide to cross the desolated city to go to an abandoned hardware store. The entrance was booby-trapped. You realized it before getting trapped. While disengaging it you get slightly hurt and you lose 2 HP. You get all the materials and some cooper cables.
+
+While restoring
+
