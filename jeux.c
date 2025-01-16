@@ -394,6 +394,7 @@ void chap1(char *fileName, char *filestats, char *language, character *player, c
 void chap2(char *fileName, char *filestats, char *language, character *player, character *zombie)
 /*Chapter 2 of the game*/
 {
+    readparagraph(fileName, 15, 30);
     readparagraph(fileName, 1, 12);
     paper_scissors_stone(fileName);
     
