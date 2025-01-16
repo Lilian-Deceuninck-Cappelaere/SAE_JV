@@ -113,25 +113,30 @@ int Randomnum(int min, int max)
     return rand() % (max - min + 1) + min;
 }
 
-int roll_dice(char *fileName)
+int roll_dice(char *language)
 /*Roll of dice up to result*/
 {
     int dice;
+    char fileName_dice[13];
+
     dice = 0;
-    while (dice <= 5)
+
+    snprintf(fileName_dice, 13, "%s/chap1.txt", language);
+    FILE *file = fopen(fileName_dice, "r");
+
+    while (dice <= 4)
     {
-        if (dice < 5)
+        if (dice < 4)
         {
             printf("\n");
-            readLine(fileName, 30);
+            readLine(fileName_dice, 30);
             dice = Randomnum(1, 6);
             printf("%d", dice);
         }
 
-        if (dice >= 5)
+        if (dice >= 4)
         {
             printf("\n");
-            readLine(fileName, 32);
         }
     }
 }
@@ -216,29 +221,28 @@ void paper_scissors_stone(char *fileName)
     winp = 0;
     winl = 0;
     
-    readLine(fileName, 37);
     printf("\n");
 
     do
     {
-        readparagraph(fileName, 38, 42);
+        readparagraph(fileName, 53, 56);
         scanf("%d", &choice);
         looter = Randomnum(1, 3);
 
         if (choice == looter)
         {
-            readLine(fileName, 43);
+            readLine(fileName, 58);
         }
 
         else if ((((choice == 1) && (looter == 3)) || ((choice == 2) && (looter == 1)) || ((choice == 3) && (looter == 2))))
         {
-            readLine(fileName, 45);
+            readLine(fileName, 60);
             winp++;
         }
 
         else
         {
-            readLine(fileName, 47);
+            readLine(fileName, 62);
             winl++;
         }
 
@@ -246,12 +250,12 @@ void paper_scissors_stone(char *fileName)
     
     if (winp == 3)
     {
-        readLine(fileName, 49);
+        readLine(fileName, 64);
     }
 
     else
     {
-        readLine(fileName, 51);
+        readLine(fileName, 66);
     }
     
     
@@ -285,8 +289,9 @@ void chap1(char *fileName, char *filestats, char *language, character *player, c
     scanf("%d", &key);
     if (key == 1)
     {
-        roll_dice(fileName);
+        roll_dice(language);
     }
+    readLine(fileName, 32);
     printf("\n");
     player->tools = 3;
     printf("\n");
@@ -394,10 +399,28 @@ void chap1(char *fileName, char *filestats, char *language, character *player, c
 void chap2(char *fileName, char *filestats, char *language, character *player, character *zombie)
 /*Chapter 2 of the game*/
 {
-    readparagraph(fileName, 15, 30);
-    readparagraph(fileName, 1, 12);
+    int key;
+
+    printf("\n");
+    readparagraph(fileName, 1, 13);
+    scanf("%d", &key);
+    if (key == 1)
+    {
+        printf("\n\n");
+    }
+
+    readparagraph(fileName, 15, 31);
+    player->pv -= 2;
+
+    scanf("%d", &key);
+    if (key == 1)
+    {
+        readparagraph(fileName, 39, 43);
+        roll_dice(language);
+        readLine(fileName, 46);
+    }
+    readparagraph(fileName, 48, 51);
     paper_scissors_stone(fileName);
-    
 }
 
 int main(int argc, char *argv[])
@@ -422,8 +445,8 @@ int main(int argc, char *argv[])
     readparagraph(filestats, 1, 4);
     printf("\n");
 
-    // snprintf(fileName, 13, "%s/chap1.txt", language);
-    // chap1(fileName, filestats, language, &player, &zombie);
+    snprintf(fileName, 13, "%s/chap1.txt", language);
+    chap1(fileName, filestats, language, &player, &zombie);
     snprintf(fileName, 13, "%s/chap2.txt", language);
     chap2(fileName, filestats, language, &player, &zombie);
     

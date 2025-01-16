@@ -10,7 +10,7 @@ Puis vous remettrez l’IUT en bon état.
 **********       Nouvelle quête : trouvez les matériaux       **********
 ********** Nouvelle quête : trouvez l’équipement informatique **********
 **********          Nouvelle quête : Restaurez l’IUT          **********
-
+Appuyez sur la touche (1) pour voir la suite.
 
 Vous avez assez de matériel en stock pour restaurer la salle de TP. 
 Vous utilisez des câbles, quelques ordinateurs, du matériel informatique et du mobilier provenant de vos stocks.
@@ -20,7 +20,7 @@ Pour cela, vous irez récupérer les éléments manquants dans des magasins et a
 Vous pouvez demander à vos amis de GEII de réparer les ordinateurs abîmés. 
 Vous décidez de traverser la ville désolée pour vous rendre dans un magasin de bricolage. 
 L’entrée était piégée. Vous vous en êtes rendu compte avant de vous faire piéger. 
-Vous le désamorcez et vous vous blessez légèrement. Vous perdez 2hp. 
+Vous le désamorcez et vous vous blessez légèrement. Vous perdez 2 pv. 
 Vous obtenez tous les matériaux nécessaires ainsi que des câbles de cuivre.
 Pendant que vous restaurez la bibliothèque, vous trouvez un message gravé dans un vieux mur. 
 Vous lisez : Il y a potentiellement quelque chose d’utile pour vous dans les tiroirs du bureau…
@@ -28,6 +28,12 @@ Vous arrêtez ce que vous êtes en train de faire et vous vous précipitez vers 
 Les tiroirs sont fermés par un verrou. Vous vous rendez compte que vous avez des clés en plus dans votre poche. 
 Vous tentez d’ouvrir les tiroirs.
 Vous trouvez un annuaire contenant les noms de professeurs et leurs adresses.
+Appuyez sur la touche (1) pour voir la suite.
+
+
+
+
+
 
 
 Vous décidez de sortir de l'IUT pour aller chercher des câbles.
@@ -36,11 +42,11 @@ En arrivant sur place vous constatez que le bâtiment est dans un état de dégr
 Vous trouvez une pelle et essayez de déterrer des câbles. 
 Vous lancez un dé de 6, le résultat obtenu doit être supérieur ou égal à 5. Appuyez sur la touche (1)
 
-Votre lancer :
 
 Félicitations ! Vous avez trouvé des câbles et décidez de retourner à l'IUT pour les déposer.
 
-Il manque aussi du matériel informatique. Vous partez à sa recherche en vous rendant à un magasin informatique dans le centre de Calais. En rentrant dans le magasin vous faites la rencontre de pillards.
+Il manque aussi du matériel informatique. Vous partez à sa recherche en vous rendant à un magasin informatique dans le centre de Calais. 
+En rentrant dans le magasin vous faites la rencontre de pillards.
 
 Ils vous proposent de jouer à pierre, feuille, ciseaux en 3 manches pour obtenir votre matériel informatique.
 
@@ -55,6 +61,6 @@ Vous remportez la manche.
 
 Le pillard remporte la manche.
 
-Vous remportez le jeu et retournez à l'IUT.
+Vous remportez le jeu et retournez à l'IUT avec le matériel informatique.
 
 Le pillard remporte le jeu. Mais sur le chemin du retour vous trouvez le matériel informatique que vous recherchez dans un autre magasin abandonné.
