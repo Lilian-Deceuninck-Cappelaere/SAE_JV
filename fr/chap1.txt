@@ -37,7 +37,7 @@ Que souhaitez-vous faire :
 
 
 (Si l’utilisateur choisi de commencer à déblayer : )
-Un zombie approche, il vous attaque défendez vous ! Appuyer sur la touche (1)
+Un zombie approche, il vous attaque défendez vous ! Appuyez sur la touche (1) puis la touche entrée.
 
  attaque :
 Zombie attaque :
