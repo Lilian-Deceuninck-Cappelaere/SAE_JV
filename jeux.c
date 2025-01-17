@@ -2,7 +2,7 @@
 
 #include <stdio.h>     /*For viewing*/
 #include <stdlib.h>    /*For file*/
-#include <string.h>    /*For string*/
+#include <ctype.h>     /*For string*/
 #include <time.h>      /*For time*/
 #include <stdbool.h>   /*For boolean*/
 #include <unistd.h>    /*For stopt temporary execution*/
@@ -13,6 +13,17 @@ typedef struct {
     int pv;
     int tools;
 } character;
+
+char* strlwr(char *str)
+{
+    char *tmp = str;
+    while (*tmp)
+    {
+        *tmp = tolower((unsigned char)*tmp);
+        tmp++;
+    }
+    return str;
+}
 
 void print_stats(char *filestats, char *language, character *player)
 /*Saves and displays player statistics*/
@@ -476,10 +487,22 @@ void chap2(char *fileName, char *filestats, char *language, character *player, c
     readparagraph(fileName, 79, 93);
 }
 
-void chap3(char *fileName, character player)
+void chap3(char *fileName, char *language, character player)
 {
+    int key;
+
     printf("\n%s", player.name);
     readparagraph(fileName, 1, 4);
+
+    snprintf(fileName, 13, "%s/chap2.txt", language); /*Change the file*/
+    FILE *file = fopen(fileName, "r");
+    readLine(fileName, 13);
+    scanf("%d", key);
+    if (key == 1)
+    {
+        printf("\n");
+    }
+    
 }
 
 int main(int argc, char *argv[])
@@ -507,7 +530,7 @@ int main(int argc, char *argv[])
     chap2(fileName, filestats, language, &player, &zombie);
 
     snprintf(fileName, 13, "%s/chap3.txt", language);
-    chap3(fileName, player);
+    chap3(fileName, language, player);
 
     return 0;
 }
