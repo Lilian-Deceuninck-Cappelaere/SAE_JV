@@ -8,9 +8,9 @@ Pour ce faire, vous devrez deviner un nombre entre 1 et 100. Vous avez 10 essais
 
 Entrez votre nombre
 
-C'est plus
+Le nombre entré est plus petit que le nombre à trouver
 
-C'est moins
+Le nombre entré est plus grand que le nombre à trouver
 
 Nombre d'essais restants:
 

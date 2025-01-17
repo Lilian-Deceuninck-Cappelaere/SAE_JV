@@ -130,7 +130,7 @@ int Randomnum(int min, int max)
 int roll_dice(char *language)
 /*Roll of dice up to result*/
 {
-    int dice;
+    int dice, i;
     char fileName_dice[13];
 
     dice = 0;
@@ -138,15 +138,27 @@ int roll_dice(char *language)
     snprintf(fileName_dice, 13, "%s/chap1.txt", language); /*Change the file*/
     FILE *file = fopen(fileName_dice, "r");
 
-    while (dice <= 4)
+    i = 0;
+
+    while ((dice <= 4) && (i < 7))
     {
-        if (dice < 4)
+        if ((dice < 4) && (i <= 5))
         {
             printf("\n");
             readLine(fileName_dice, 30);        /*Read 30 line in file*/
             dice = Randomnum(1, 6);             /*Generate a random number between 1 and 6*/
             printf("%d", dice);
+            i++;
         }
+
+        if (i == 6)
+        {
+            printf("\n");
+            readLine(fileName_dice, 30);
+            dice = 5;
+            printf("%d", dice);
+        }
+        
 
         if (dice >= 4)
         {

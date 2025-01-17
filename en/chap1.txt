@@ -8,9 +8,9 @@ To unlock the door, you must find the right number between 1 and 100. You have 1
 
 Enter your number
 
-It's more
+Your number is inferior to the secret number
 
-It's less
+Your number is greater than the secret number
 
 Number of attempts remaining:
 
