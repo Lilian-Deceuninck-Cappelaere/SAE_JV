@@ -1,11 +1,10 @@
 /*Deceuninck Cappelaere Lilian et Molinaro Antoine*/
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <sys/stat.h>
-#include <string.h>
-#include <time.h>
-#include <stdbool.h>
+#include <stdio.h>     /*For viewing*/
+#include <stdlib.h>    /*For file*/
+#include <string.h>    /*For string*/
+#include <time.h>      /*For time*/
+#include <stdbool.h>   /*For boolean*/
 #include <unistd.h>    /*For stopt temporary execution*/
 
 /*The player and zombie statistics*/
@@ -16,9 +15,10 @@ typedef struct {
 } character;
 
 void print_stats(char *filestats, char *language, character *player)
+/*Saves and displays player statistics*/
 {
-    snprintf(filestats, 13, "%s/stats.txt", language);
-    FILE *file = fopen(filestats, "w");
+    snprintf(filestats, 13, "%s/stats.txt", language);  /*Name of file*/
+    FILE *file = fopen(filestats, "w");                 /*Open the file in write tights*/
 
     if (strcmp(language, "fr") == 0)
     {
@@ -44,8 +44,8 @@ void readLine(const char *fileName, int lineNumber)
     {
         if (currentLine == lineNumber)
         {
-            printf("%s", buffer);
-            fclose(file);       /*Close file*/
+            printf("%s", buffer);   /*Displays the line*/
+            fclose(file);           /*Close file*/
             return;
         }
         currentLine++;
@@ -86,17 +86,17 @@ char select_language(char *language)
         printf("Choisir la langue (fr) / Select language (en) : ");
         scanf("%s", language);
 
-        if ((strcmp(language, "fr") == 0) || (strcmp(language, "FR") == 0) || (strcmp(language, "Fr") == 0) || (strcmp(language, "fR") == 0)) /*compares strings*/
+        if (strcmp(strlwr(language), "fr") == 0) /*Turns the string to lowercase and compares whith "fr"*/
         {
             printf("****Jeux en Français****\n\n");
             ok = 1;
         }
 
-        else if ((strcmp(language, "en") == 0) || (strcmp(language, "EN") == 0) || (strcmp(language, "En") == 0) || (strcmp(language, "eN") == 0))
-        {
-            printf("****Game in English****\n");
-            ok = 1;
-        }
+        else if (strcmp (strlwr(language), "en") == 0)
+            {
+                printf("****Game in English****\n");
+                ok = 1;
+            }
         
         else
         {
@@ -110,7 +110,8 @@ char select_language(char *language)
 int Randomnum(int min, int max)
 /*Random number generator function*/
 {
-    return rand() % (max - min + 1) + min;
+    srand(time(0));     /*For different random number in each game*/
+    return rand() % (max - min + 1) + min; /*Generate a random number within a specified range [min, max] */
 }
 
 int roll_dice(char *language)
@@ -121,7 +122,7 @@ int roll_dice(char *language)
 
     dice = 0;
 
-    snprintf(fileName_dice, 13, "%s/chap1.txt", language);
+    snprintf(fileName_dice, 13, "%s/chap1.txt", language); /*Change the file*/
     FILE *file = fopen(fileName_dice, "r");
 
     while (dice <= 4)
@@ -129,8 +130,8 @@ int roll_dice(char *language)
         if (dice < 4)
         {
             printf("\n");
-            readLine(fileName_dice, 30);
-            dice = Randomnum(1, 6);
+            readLine(fileName_dice, 30);        /*Read 30 line in file*/
+            dice = Randomnum(1, 6);             /*Generate a random number between 1 and 6*/
             printf("%d", dice);
         }
 
@@ -142,8 +143,8 @@ int roll_dice(char *language)
 }
 
 
-
-void guess_the_number(char *fileName)           /*A mini game to find a number*/
+void guess_the_number(char *fileName)           
+/*A mini game to find a number*/
 {
     int numbertofind, counter, userinputnumber;
     bool numfound, gamewin;
@@ -155,7 +156,7 @@ void guess_the_number(char *fileName)           /*A mini game to find a number*/
 
     while ((!numfound) && (counter > 0))
     {
-        readLine(fileName, 9);                  /*Read line 9 in file*/
+        readLine(fileName, 9);
         scanf("%d", &userinputnumber);
         if (numbertofind == userinputnumber)
         {
@@ -207,6 +208,11 @@ void fight(char *fileName, character *player, character *zombie)
         readLine(fileName, 45);
         printf("%d\n", player->pv);
         readLine(fileName, 46);
+        if (zombie->pv < 0)
+        {
+            zombie->pv = 0;
+        }
+        
         printf("%d\n", zombie->pv);
         sleep(3);
         printf("\n");                       /*Stopt 4 sec execution*/
@@ -305,10 +311,12 @@ void chap1(char *fileName, char *filestats, char *language, character *player, c
     bool computer, td, tp, Synave, library, password;
 
     printf("\n");
+    print_stats(filestats, language, player);
+    readparagraph(filestats, 1, 4);
+    printf("\n");
     readLine(fileName, 1);
     printf("%s", player->name);
     readparagraph(fileName, 2, 6);
-    srand(time(0));
     printf("\n");
     guess_the_number(fileName);
     printf("\n");
@@ -322,7 +330,9 @@ void chap1(char *fileName, char *filestats, char *language, character *player, c
     readLine(fileName, 32);
     printf("\n");
     player->tools = 3;
-    printf("\n");
+    print_stats(filestats, language, player);
+    readparagraph(filestats, 1, 4);
+    printf("\n\n");
     readparagraph(fileName, 34, 36);
     scanf("%d", &action);
     for (i = 0; i < 2; i++)
@@ -376,6 +386,10 @@ void chap1(char *fileName, char *filestats, char *language, character *player, c
         case 2:
             readparagraph(fileName, 81, 87);
             player->pv -= 5;
+            printf("\n");
+            print_stats(filestats, language, player);
+            readparagraph(filestats, 1, 4);
+            printf("\n");
             td = true;
             break;
 
@@ -402,6 +416,7 @@ void chap1(char *fileName, char *filestats, char *language, character *player, c
         }
     }
 
+    printf("\n");
     readLine(fileName, 104);
     password = false;
     while (!password)
@@ -438,6 +453,10 @@ void chap2(char *fileName, char *filestats, char *language, character *player, c
     }
     readparagraph(fileName, 15, 31);
     player->pv -= 2;
+    printf("\n");
+    print_stats(filestats, language, player);
+    readparagraph(filestats, 1, 4);
+    printf("\n");
 
     scanf("%d", &key);
     if (key == 1)
@@ -480,10 +499,6 @@ int main(int argc, char *argv[])
     player.pv = 100;
     player.tools = 0;
     zombie.pv = 20;
-
-    print_stats(filestats, language, &player);
-    readparagraph(filestats, 1, 4);
-    printf("\n");
 
     snprintf(fileName, 13, "%s/chap1.txt", language);
     chap1(fileName, filestats, language, &player, &zombie);
