@@ -341,7 +341,7 @@ void chap1(char *fileName, char *filestats, char *language, character *player, c
     {
         roll_dice(language);
     }
-    
+
     readLine(fileName, 32);
     printf("\n");
     player->tools = 3;
@@ -468,10 +468,6 @@ void chap2(char *fileName, char *filestats, char *language, character *player, c
     }
     readparagraph(fileName, 15, 31);
     player->pv -= 2;
-    printf("\n");
-    print_stats(filestats, language, player);
-    readparagraph(filestats, 1, 4);
-    printf("\n");
 
     scanf("%d", &key);
     if (key == 1)
