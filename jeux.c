@@ -336,15 +336,12 @@ void chap1(char *fileName, char *filestats, char *language, character *player, c
     readparagraph(fileName, 21, 26);
     readLine(fileName, 28);
     scanf("%d", &key);
+    
     if (key == 1)
     {
         roll_dice(language);
     }
-
-    else
-    {
-        printf("Erreur: Veuillez entrer uniquement le chiffre 1.\nEntrez le : ");
-
+    
     readLine(fileName, 32);
     printf("\n");
     player->tools = 3;
