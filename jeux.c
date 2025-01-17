@@ -2,7 +2,8 @@
 
 #include <stdio.h>     /*For viewing*/
 #include <stdlib.h>    /*For file*/
-#include <ctype.h>     /*For string*/
+#include <ctype.h>     /*For pass string in lowercase*/
+#include <string.h>    /*For string*/
 #include <time.h>      /*For time*/
 #include <stdbool.h>   /*For boolean*/
 #include <unistd.h>    /*For stopt temporary execution*/
@@ -15,11 +16,12 @@ typedef struct {
 } character;
 
 char* strlwr(char *str)
+/*Pass a string in lowercase*/
 {
     char *tmp = str;
     while (*tmp)
     {
-        *tmp = tolower((unsigned char)*tmp);
+        *tmp = tolower((char)*tmp);         /*Convert*/
         tmp++;
     }
     return str;
@@ -338,6 +340,11 @@ void chap1(char *fileName, char *filestats, char *language, character *player, c
     {
         roll_dice(language);
     }
+
+    else
+    {
+        printf("Erreur: Veuillez entrer uniquement le chiffre 1.\nEntrez le : ");
+
     readLine(fileName, 32);
     printf("\n");
     player->tools = 3;
