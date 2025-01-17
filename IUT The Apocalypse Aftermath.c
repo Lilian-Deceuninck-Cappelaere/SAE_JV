@@ -346,7 +346,7 @@ void chap1(char *fileName, char *filestats, char *language, character *player, c
     printf("\n");
     readparagraph(fileName, 21, 26);
     readLine(fileName, 28);
-    key = is_number(fileName);
+    scanf("%d", &key);
     
     if (key == 1)
     {
