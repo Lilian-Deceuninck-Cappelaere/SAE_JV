@@ -3,4 +3,4 @@ You made the IUT going back to its glory days.
 Thanks to you, students are back to class, and they can learn computer science again! 
 The next generation of computer scientist is assured! Enter a number and press the Enter key.
 
-Enter a number !
+Please enter a number.

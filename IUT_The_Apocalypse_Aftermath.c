@@ -344,7 +344,7 @@ void chap1(char *fileName, char *filestats, char *language, character *player, c
 /*Chapter 1 of the game*/
 {
     int key, action, i, room, code;
-    bool computer, td, tp, mrSynaveoffice, library, password, inpOk, keyOK,actionOk;
+    bool computer, td, tp, mrSynaveoffice, library, password, inpOk, keyOK, actionOk;
     char roomchar[2], codechar[4], keyChar[2], actionChar[2];
     
 
@@ -360,20 +360,36 @@ void chap1(char *fileName, char *filestats, char *language, character *player, c
     printf("\n");
     readparagraph(fileName, 21, 26);
     readLine(fileName, 28);
-    scanf("%d", &key);
-   
-    
-    if (key == 1)
+    sleep(2);
+
+    keyOK = false;
+
+    while (!keyOK)
     {
-        roll_dice(language);
+        keyChar[0] = '\0';    /*Initialize the variable to an empty string*/
+        scanf("%s", keyChar); /*Read input as string*/
+        if (!validInput(keyChar))
+        {
+            readLine(fileName, 118);
+            printf("\n");
+            continue; /*Skip the rest of the loop if user's input is invalid*/
+        }
+        else
+        {
+            keyOK = true;
+        }
     }
+
+    roll_dice(language);
 
     readLine(fileName, 32);
     printf("\n");
     player->tools = 3;
     print_stats(filestats, language, player);
+
     readparagraph(filestats, 1, 4);
     printf("\n\n");
+
     readparagraph(fileName, 34, 36);
     scanf("%d", &action);
     for (i = 0; i < 2; i++)/*User choices between two possibilities*/
@@ -388,15 +404,31 @@ void chap1(char *fileName, char *filestats, char *language, character *player, c
 
         case 2:
             readLine(fileName, 40);
-            scanf("%d", &key);
-            if (key == 1)
+
+            keyOK = false;
+
+            while (!keyOK)
             {
-                printf("\n");
-                print_stats(filestats, language, player);
-                readparagraph(filestats, 1, 4);
-                printf("\n");
-                fight(fileName, player, zombie);
+                keyChar[0] = '\0';    /*Initialize the variable to an empty string*/
+                scanf("%s", keyChar); /*Read input as string*/
+                if (!validInput(keyChar))
+                {
+                    readLine(fileName, 118);
+                    printf("\n");
+                    continue; /*Skip the rest of the loop if user's input is invalid*/
+                }
+                else
+                {
+                    keyOK = true;
+                }
             }
+            
+            printf("\n");
+            print_stats(filestats, language, player);
+            readparagraph(filestats, 1, 4);
+            printf("\n");
+            fight(fileName, player, zombie);
+            
             readparagraph(fileName, 48, 54);
             i = 1;
             break;
@@ -518,7 +550,6 @@ void chap1(char *fileName, char *filestats, char *language, character *player, c
 void chap2(char *fileName, char *filestats, char *language, character *player, character *zombie)
 /*Chapter 2 of the game*/
 {
-    int key;
     bool keyOK;
     char keyChar[2];
 
@@ -540,7 +571,6 @@ void chap2(char *fileName, char *filestats, char *language, character *player, c
             keyOK = true;
         }
     }
-    key = atoi(keyChar);/*Convert input string to an integer if valid*/
     
     printf("\n\n");
     
@@ -564,7 +594,6 @@ void chap2(char *fileName, char *filestats, char *language, character *player, c
             keyOK = true;
         }
     }
-    key = atoi(keyChar);/*Convert input string to an integer if valid*/
     
     printf("\n\n");
 

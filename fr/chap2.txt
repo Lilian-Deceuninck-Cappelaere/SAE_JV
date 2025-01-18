@@ -40,7 +40,7 @@ Vous décidez de sortir de l'IUT pour aller chercher des câbles.
 Vous vous souvenez qu'une usine de câbles était présente à Calais avant l'apocalypse sous le nom d'Alcatel.
 En arrivant sur place vous constatez que le bâtiment est dans un état de dégradation plus avancé que l'IUT.
 Vous trouvez une pelle et essayez de déterrer des câbles. 
-Vous lancez un dé de 6, le résultat obtenu doit être supérieur ou égal à 4. Appuyez sur la touche (1)
+Vous lancez un dé de 6, le résultat obtenu doit être supérieur ou égal à 4. Entrez un nombre puis appuyez sur la touche entrée.
 
 
 Félicitations ! Vous avez trouvé des câbles et décidez de retourner à l'IUT pour les déposer.
@@ -92,5 +92,5 @@ Félicitations ! Vous avez accompli votre mission.
 Vous rappelez ensuite les professeurs grâce à l’annuaire. 
 Après de nombreuses lettres, vous arrivez à reformer l’équipe pédagogique au grand complet !
 
-(Si l'utilisateur entre autre chose que 1)
-Veuillez entrer 1.
+(Si l'utilisateur entre autre chose q'un nombre)
+Veuillez entrer une valeur numérique.

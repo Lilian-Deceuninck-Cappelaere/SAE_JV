@@ -25,7 +25,7 @@ Gardez les yeux ouverts. Pour déblayer, il vous faut des outils. Ils sont peut-
 
 ********** Nouvelle quête : trouver les outils. **********
 
-Pour trouver les outils vous devez lancer un dès de 6 le résultat obtenu doit être supérieur ou égal à 4. Appuyer sur la touche (1)
+Pour trouver les outils vous devez lancer un dès de 6 le résultat obtenu doit être supérieur ou égal à 4. Entrez un nombre puis appuyez sur la touche entrée.
 
 Votre lancer :
 
@@ -37,7 +37,7 @@ Que souhaitez-vous faire :
 
 
 (Si l’utilisateur choisi de commencer à déblayer : )
-Un zombie approche, il vous attaque défendez vous ! Appuyez sur la touche (1) puis la touche entrée.
+Un zombie approche, il vous attaque défendez vous ! Entrez un nombre puis appuyez sur la touche entrée.
 
  attaque :
 Zombie attaque :
@@ -74,7 +74,7 @@ Où souhaitez-vous aller ?
 Vous êtes dans la salle informatique. La salle a été saccagée. 
 Les ordinateurs, tables, chaises et déchets jonchent le sol. 
 Dans, un coin vous trouvez un amoncellement de câbles en cuivres. 
-Les ordinateurs abimés, les meubles en bon état et les câbles sont ajoutés à votre inventaire. 
+Les ordinateurs abîmés, les meubles en bon état et les câbles sont ajoutés à votre inventaire. 
 Vous remettez en ordre la salle.
 
 (Si le joueur choisit d’aller dans la salle de TP :)
@@ -114,5 +114,5 @@ Vous trouvez une clé…
 (Si le joueur visite une deuxième fois la pièce)
 Vous avez déjà visité cette pièce.
 
-(Si l'utilisateur entre une lettre au lieu d'une valeure numérique)
-Veuillez entrer une valeure numérique.
+(Si l'utilisateur entre une lettre au lieu d'une valeur numérique)
+Veuillez entrer une valeur numérique.
