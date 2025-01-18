@@ -528,7 +528,7 @@ void chap2(char *fileName, char *filestats, char *language, character *player, c
     keyOK=false;
     
     while(!keyOK){
-        keyChar[0]='\0';/*Initialize the variable to an empty string*/ 
+        keyChar[0] = '\0';/*Initialize the variable to an empty string*/ 
         scanf("%s", keyChar);/*Read input as string*/
         if(!validInput(keyChar)){
             readLine(fileName, 96);
@@ -537,10 +537,10 @@ void chap2(char *fileName, char *filestats, char *language, character *player, c
         }
         else
         {
-            keyOK=true;
+            keyOK = true;
         }
     }
-    key=atoi(keyChar);/*Convert input string to an integer if valid*/
+    key = atoi(keyChar);/*Convert input string to an integer if valid*/
     
     printf("\n\n");
     
@@ -549,10 +549,10 @@ void chap2(char *fileName, char *filestats, char *language, character *player, c
     player->pv -= 2;
     sleep(2);
     
-    keyOK=false;
+    keyOK = false;
     
     while(!keyOK){
-        keyChar[0]='\0';/*Initialize the variable to an empty string*/ 
+        keyChar[0] = '\0';/*Initialize the variable to an empty string*/ 
         scanf("%s", keyChar);/*Read input as string*/
         if(!validInput(keyChar)){
             readLine(fileName, 96);
@@ -561,10 +561,10 @@ void chap2(char *fileName, char *filestats, char *language, character *player, c
         }
         else
         {
-            keyOK=true;
+            keyOK = true;
         }
     }
-    key=atoi(keyChar);/*Convert input string to an integer if valid*/
+    key = atoi(keyChar);/*Convert input string to an integer if valid*/
     
     printf("\n\n");
 
@@ -587,9 +587,29 @@ void chap2(char *fileName, char *filestats, char *language, character *player, c
 
 void chap3(char *fileName, char *language, character player)
 {
+    int key;
+    bool keyOK;
+    char keyChar[2];
+
     printf("\n%s", player.name);
     readparagraph(fileName, 1, 4);
 
+    while (!keyOK)
+    {
+        keyChar[0] = '\0';    /*Initialize the variable to an empty string*/
+        scanf("%s", keyChar); /*Read input as string*/
+        if (!validInput(keyChar))
+        {
+            readLine(fileName, 6);
+            printf("\n");
+            continue; /*Skip the rest of the loop if user's input is invalid*/
+        }
+        else
+        {
+            keyOK = true;
+        }
+    }
+    key = atoi(keyChar); /*Convert input string to an integer if valid*/
 }
 
 int main(int argc, char *argv[])
