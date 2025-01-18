@@ -116,3 +116,4 @@ Vous avez déjà visité cette pièce.
 
 (Si l'utilisateur entre une lettre au lieu d'une valeur numérique)
 Veuillez entrer une valeur numérique.
+Veuillez entrer une valeur numérique comprise entre 1 et 2.

@@ -248,7 +248,7 @@ void fight(char *fileName, character *player, character *zombie)
         }
         
         printf("%d\n", zombie->pv);
-        sleep(1.5);
+        sleep(2);
         printf("\n");
     }
 }
@@ -257,6 +257,8 @@ void paper_scissors_stone(char *fileName)
 /*Mini game : paper, scissors, stone*/
 {
     int choice, winp, winl, looter;
+    bool keyOK;
+    char keyChar[2];
 
     winp = 0;
     winl = 0;
@@ -266,7 +268,25 @@ void paper_scissors_stone(char *fileName)
     do
     {
         readparagraph(fileName, 53, 56);
-        scanf("%d", &choice);
+        keyOK = false;
+
+        while (!keyOK)
+        {
+            keyChar[0] = '\0';    /*Initialize the variable to an empty string*/
+            scanf("%s", keyChar); /*Read input as string*/
+            if ((!validInput(keyChar)) || (atoi(keyChar) < 1) || (atoi(keyChar) > 3)) /*Calls validInput function*/
+            {
+                readLine(fileName, 97);
+                printf("\n");
+                continue; /*Skip the rest of the loop if user's input is invalid*/
+            }
+            else
+            {
+                keyOK = true;
+            }
+        }
+        choice = atoi(keyChar); /*Convert input string to an integer if valid*/
+
         looter = Randomnum(1, 3);
 
         if (choice == looter)
@@ -391,7 +411,25 @@ void chap1(char *fileName, char *filestats, char *language, character *player, c
     printf("\n\n");
 
     readparagraph(fileName, 34, 36);
-    scanf("%d", &action);
+    keyOK = false;
+
+    while (!keyOK)
+    {
+        keyChar[0] = '\0';                                                        /*Initialize the variable to an empty string*/
+        scanf("%s", keyChar);                                                     /*Read input as string*/
+        if ((!validInput(keyChar)) || (atoi(keyChar) < 1) || (atoi(keyChar) > 2)) /*Calls validInput function*/
+        {
+            readLine(fileName, 119);
+            printf("\n");
+            continue; /*Skip the rest of the loop if user's input is invalid*/
+        }
+        else
+        {
+            keyOK = true;
+        }
+    }
+    action = atoi(keyChar); /*Convert input string to an integer if valid*/
+
     for (i = 0; i < 2; i++)/*User choices between two possibilities*/
     {
         switch (action)
@@ -422,7 +460,7 @@ void chap1(char *fileName, char *filestats, char *language, character *player, c
                     keyOK = true;
                 }
             }
-            
+
             printf("\n");
             print_stats(filestats, language, player);
             readparagraph(filestats, 1, 4);

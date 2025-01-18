@@ -28,7 +28,7 @@ A lock enables you to open the drawers.
 You realize that you still have some spare keys. You try to unlock the drawers with the keys. 
 You find a book containing a directory with teacher’s names and their addresses.
 
-Enter any number to see the rest.
+Enter a number and press the Enter key.
 
 
 
@@ -40,7 +40,7 @@ You decide to get out of the IUT to get cables.
 You remind of place where you could get cables. The Alcatel plant. As you arrive, you see how overgrown and derelict the place is.
 You find a shovel and you start to dig up some cable
 You throw a 6 faced dice. The obtained result must be superior or equal to 4. 
-Press key (1) to see the rest.
+Enter a number and press the Enter key.
 
 
 Congratulations! You’ve found cables, and you decide to head back to the IUT and drop them off.
@@ -94,3 +94,4 @@ After numerous letters, you’ve reassembled the entire teaching team!
 
 (If user enters something else than a number)
 Please enter a number.
+Please enter a number between 1 and 3.
