@@ -10,7 +10,7 @@ Puis vous remettrez l’IUT en bon état.
 **********       Nouvelle quête : trouvez les matériaux       **********
 ********** Nouvelle quête : trouvez l’équipement informatique **********
 **********          Nouvelle quête : Restaurez l’IUT          **********
-Entrez un nombre puis appuiyez sur la touche entrée.
+Entrez un nombre puis appuyez sur la touche entrée.
 
 Vous avez assez de matériel en stock pour restaurer la salle de TP. 
 Vous utilisez des câbles, quelques ordinateurs, du matériel informatique et du mobilier provenant de vos stocks.
@@ -28,7 +28,7 @@ Vous arrêtez ce que vous êtes en train de faire et vous vous précipitez vers 
 Les tiroirs sont fermés par un verrou. Vous vous rendez compte que vous avez des clés en plus dans votre poche. 
 Vous tentez d’ouvrir les tiroirs.
 Vous trouvez un annuaire contenant les noms de professeurs et leurs adresses.
-Entrez un nombre puis appuiyez sur la touche entrée.
+Entrez un nombre puis appuyez sur la touche entrée.
 
 
 L’annuaire sera utilisé plus tard. Les stocks de câbles de cuivre s’amenuisent…
