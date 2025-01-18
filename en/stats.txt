@@ -1,4 +1,4 @@
 **** Your statistics ****
-	Name : M
-	Health points : 76
+	Name : m
+	Health points : 80
 	Tools attack  : 3

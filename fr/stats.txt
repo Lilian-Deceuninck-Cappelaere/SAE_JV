@@ -1,4 +1,4 @@
 **** Vos statistiques ****
-	Nom : fr
-	Points de vie : 61
+	Nom : name
+	Points de vie : 100
 	Points d'attaque outils : 3
