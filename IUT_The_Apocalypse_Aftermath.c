@@ -361,23 +361,8 @@ void chap1(char *fileName, char *filestats, char *language, character *player, c
     readparagraph(fileName, 21, 26);
     readLine(fileName, 28);
     scanf("%d", &key);
-    //keyOK=false;
-    //
-    //while(!keyOK){
-    //    keyChar[0]='\0';/*Initialize the variable to an empty string*/ 
-    //    scanf("%s", keyChar);/*Read input as string*/
-    //    if(!validInput(keyChar)){
-    //        readLine(fileName, 96);
-    //        printf("\n");
-    //        continue;/*Skip the rest of the loop if user's input is invalid*/
-    //    }
-    //    else
-    //    {
-    //        keyOK=true;
-    //    }
-    //}
-    //key=atoi(keyChar);/*Convert input string to an integer if valid*/
-    scanf("%d", &action);
+   
+    
     if (key == 1)
     {
         roll_dice(language);
@@ -390,7 +375,7 @@ void chap1(char *fileName, char *filestats, char *language, character *player, c
     readparagraph(filestats, 1, 4);
     printf("\n\n");
     readparagraph(fileName, 34, 36);
-    
+    scanf("%d", &action);
     for (i = 0; i < 2; i++)/*User choices between two possibilities*/
     {
         switch (action)
