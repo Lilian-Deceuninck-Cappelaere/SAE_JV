@@ -3,4 +3,4 @@ Vous êtes parvenu à faire renaître l’IUT de la désolation et de l’abando
 Grâce à vous, les cours ont pu reprendre et de nouvelles personnes peuvent se former à l’informatique à nouveau. 
 La relève est assurée ! Entrez un chiffre puis appuyez sur la touche entrée.
 
-Entrez un chiffre !
+Veuillez entrer une valeur numérique.
