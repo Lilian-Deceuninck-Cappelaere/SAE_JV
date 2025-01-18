@@ -325,7 +325,7 @@ void enigma(char *fileName)
             i++;
         }
     } while (!find && i < 2);
-    if(i<1){
+    if(find=false){
         readLine(fileName,78);
     }
 }
