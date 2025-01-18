@@ -1,12 +1,12 @@
 /*Deceuninck Cappelaere Lilian et Molinaro Antoine*/
 
-#include <stdio.h>     /*For viewing*/
-#include <stdlib.h>    /*For file*/
-#include <ctype.h>     /*For pass string in lowercase*/
+#include <stdio.h>     /*Input/output library*/
+#include <stdlib.h>    /*For files*/
+#include <ctype.h>     /*To pass a string in lowercase*/
 #include <string.h>    /*For string*/
 #include <time.h>      /*For time*/
 #include <stdbool.h>   /*For boolean*/
-#include <unistd.h>    /*For stopt temporary execution*/
+#include <unistd.h>    /*To stop execution temporary*/
 
 /*The player and zombie statistics*/
 typedef struct {
@@ -14,6 +14,17 @@ typedef struct {
     int pv;
     int tools;
 } character;
+
+
+
+bool validInput(char *input) {/*Function used to check if user's input is a number*/
+    for (int i = 0; input[i] != '\0'; i++) {
+        if (!isdigit(input[i])) {
+            return false;
+        }
+    }
+    return true;
+}
 
 char* strlwr(char *str)
 /*Pass a string in lowercase*/
@@ -105,7 +116,7 @@ char select_language(char *language)
             ok = 1;
         }
 
-        else if (strcmp (strlwr(language), "en") == 0)
+        else if (strcmp (strlwr(language), "en") == 0)/*Turns the string to lowercase and compares whith "en"*/
             {
                 printf("****Game in English****\n");
                 ok = 1;
@@ -145,7 +156,7 @@ int roll_dice(char *language)
         if ((dice < 4) && (i <= 5))
         {
             printf("\n");
-            readLine(fileName_dice, 30);        /*Read 30 line in file*/
+            readLine(fileName_dice, 30);        /*Read  line 30 in file*/
             dice = Randomnum(1, 6);             /*Generate a random number between 1 and 6*/
             printf("%d", dice);
             i++;
@@ -168,47 +179,46 @@ int roll_dice(char *language)
 }
 
 
-void guess_the_number(char *fileName)           
-/*A mini game to find a number*/
-{
+
+
+void guess_the_number(char *fileName) {
     int numbertofind, counter, userinputnumber;
     bool numfound, gamewin;
-
+    char userinputnumberchar[10];
     numbertofind = Randomnum(1, 100);
     counter = 10;
     numfound = false;
-
-    while ((!numfound) && (counter > 0))
-    {
+    printf("%d",numbertofind);
+    while ((!numfound) && (counter > 0)) {
+        userinputnumberchar[0] = '\0'; /*Initialize the variable to an empty string*/
         readLine(fileName, 9);
-        scanf("%d", &userinputnumber);
-        if (numbertofind == userinputnumber)
-        {
+        scanf("%s", userinputnumberchar); /*Read input as string*/
+        if (!validInput(userinputnumberchar)) {/*Calls validInput function*/
+            readLine(fileName, 118);
+            continue; /*Skip the rest of the loop if user's input is invalid*/
+        }
+        userinputnumber = atoi(userinputnumberchar); /*Convert input string to an integer if valid*/
+        if (numbertofind == userinputnumber) {
             readLine(fileName, 17);
             numfound = true;
-        }
-        else if (userinputnumber < numbertofind)
-        {
+        } else if (userinputnumber < numbertofind) {
             readLine(fileName, 11);
             counter--;
             readLine(fileName, 15);
             printf("%d\n", counter);
-        }
-        else
-        {
+        } else {
             readLine(fileName, 13);
             counter--;
             readLine(fileName, 15);
             printf("%d\n", counter);
         }
     }
-    if ((counter == 0) && (!numfound))
-    {
+    if ((counter == 0) && (!numfound)) {
         readLine(fileName, 19);
         guess_the_number(fileName);
-    } 
-
+    }
 }
+
 
 void fight(char *fileName, character *player, character *zombie) 
 /*Fight between the player and the zombie*/
@@ -225,21 +235,21 @@ void fight(char *fileName, character *player, character *zombie)
         readLine(fileName, 43);
         printf("%d\n", zombieAttack);
 
-        player->pv -= zombieAttack;
-        zombie->pv -= playerAttack;
+        player->pv -= zombieAttack;/*substract zombie attack health points to player's health points*/
+        zombie->pv -= playerAttack;/*substract player's attack health points to zombie's health points*/
 
         printf("%s", player->name);
         readLine(fileName, 45);
         printf("%d\n", player->pv);
         readLine(fileName, 46);
-        if (zombie->pv < 0)
+        if (zombie->pv < 0)/*If zombies healt points are negative, they are set to 0 because HP can't be negative*/
         {
             zombie->pv = 0;
         }
         
         printf("%d\n", zombie->pv);
-        sleep(3);
-        printf("\n");                       /*Stopt 4 sec execution*/
+        sleep(1.5);
+        printf("\n");
     }
 }
 
@@ -295,7 +305,6 @@ void enigma(char *fileName)
     char word[50];
     int i;
     bool find;
-
     i = 0;
     find = false;
     do
@@ -316,6 +325,9 @@ void enigma(char *fileName)
             i++;
         }
     } while (!find && i < 2);
+    if(i<1){
+        readLine(fileName,78);
+    }
 }
 
 
@@ -332,7 +344,8 @@ void chap1(char *fileName, char *filestats, char *language, character *player, c
 /*Chapter 1 of the game*/
 {
     int key, action, i, room, code;
-    bool computer, td, tp, Synave, library, password;
+    bool computer, td, tp, mrSynaveoffice, library, password, inpOk;
+    char roomchar[10], codechar[4];
 
     printf("\n");
     print_stats(filestats, language, player);
@@ -361,7 +374,7 @@ void chap1(char *fileName, char *filestats, char *language, character *player, c
     printf("\n\n");
     readparagraph(fileName, 34, 36);
     scanf("%d", &action);
-    for (i = 0; i < 2; i++)
+    for (i = 0; i < 2; i++)/*User choices between two possibilities*/
     {
         switch (action)
         {
@@ -390,51 +403,80 @@ void chap1(char *fileName, char *filestats, char *language, character *player, c
             break;
         }
     }
-
+    /*room visited status. False if user haven't visited the room yet*/
     computer = false;
     td = false;
     tp = false;
-    Synave = false; 
+    mrSynaveoffice = false; 
     library = false;
 
-    while ((!computer) || (!td) || (!tp) || (!Synave) || (!library))
+    
+    while ((!computer) || (!td) || (!tp) || (!mrSynaveoffice) || (!library))/*Loop: stops if user visited all rooms*/
     {
         printf("\n");
+        roomchar[0] = '\0'; /*Initialize the variable to an empty string*/
         readparagraph(fileName, 64, 70);
-        scanf("%d", &room);
+        scanf("%s", roomchar); /*Read input as string*/
+        if (!validInput(roomchar)) {/*Calls validInput function*/
+            readLine(fileName, 118);
+            continue; /*Skip the rest of the loop if user's input is invalid*/
+        }
+        room = atoi(roomchar); /*Convert input string to an integer if valid*/
         switch (room)
         {
         case 1:
+            if(computer==true){/*test if the room has already been visited*/
+                readLine(fileName,115);
+            }
+            else{/*If the room has never been visited by the player*/
             readparagraph(fileName, 74, 78);
             computer = true;
+            }
             break;
-
         case 2:
+            if(tp==true){
+                readLine(fileName,115);
+            }
+            else
+            {
             readparagraph(fileName, 81, 87);
             player->pv -= 5;
             printf("\n");
             print_stats(filestats, language, player);
             readparagraph(filestats, 1, 4);
             printf("\n");
-            td = true;
+            tp = true;
+            }
             break;
 
         case 3:
+            if(td==true){
+                readLine(fileName,115);
+            }
+            else
+            {
             readparagraph(fileName, 90, 92);
             zombie->pv = 20;
             fight(fileName, player, zombie);
             readLine(fileName, 93);
-            tp = true;
+            td = true;
+            }
             break;
 
         case 4:
             readLine(fileName, 96);
-            Synave = true;
+            mrSynaveoffice = true;
             break;
 
         case 5:
+            if(library==true){
+                readLine(fileName,115);
+            }
+            else
+            {
             readparagraph(fileName, 99, 101);
             library = true;
+            }
             break;
 
         default:
@@ -447,8 +489,14 @@ void chap1(char *fileName, char *filestats, char *language, character *player, c
     password = false;
     while (!password)
     {
+        codechar[0] = '\0'; /*Initialize the variable to an empty string*/
         readLine(fileName, 106);
-        scanf("%d", &code);
+        scanf("%s", codechar); /*Read input as string*/
+        if (!validInput(codechar)) {/*Calls validInput function*/
+            readLine(fileName, 118);
+            continue; /*Skip the rest of the loop if user's input is invalid*/
+        }
+        code = atoi(codechar); /*Convert input string to an integer if valid*/
 
         if (code == 371)
         {
@@ -469,51 +517,77 @@ void chap2(char *fileName, char *filestats, char *language, character *player, c
 /*Chapter 2 of the game*/
 {
     int key;
+    bool keyOK;
+    char keyChar[2];
 
     printf("\n");
     readparagraph(fileName, 1, 13);
-    scanf("%d", &key);
-    if (key == 1)
-    {
-        printf("\n\n");
+    sleep(2);
+    keyOK=false;
+    
+    while(!keyOK){
+        keyChar[0]='\0';/*Initialize the variable to an empty string*/ 
+        scanf("%s", keyChar);/*Read input as string*/
+        if(!validInput(keyChar)){
+            readLine(fileName, 96);
+            printf("\n");
+            continue;/*Skip the rest of the loop if user's input is invalid*/
+        }
+        else
+        {
+            keyOK=true;
+        }
     }
+    key=atoi(keyChar);/*Convert input string to an integer if valid*/
+    
+    printf("\n\n");
+    
+
     readparagraph(fileName, 15, 31);
     player->pv -= 2;
-
-    scanf("%d", &key);
-    if (key == 1)
-    {
-        readparagraph(fileName, 39, 43);
-        roll_dice(language);
-        readLine(fileName, 46);
-        printf("\n");
+    sleep(2);
+    
+    keyOK=false;
+    
+    while(!keyOK){
+        keyChar[0]='\0';/*Initialize the variable to an empty string*/ 
+        scanf("%s", keyChar);/*Read input as string*/
+        if(!validInput(keyChar)){
+            readLine(fileName, 96);
+            printf("\n");
+            continue;/*Skip the rest of the loop if user's input is invalid*/
+        }
+        else
+        {
+            keyOK=true;
+        }
     }
+    key=atoi(keyChar);/*Convert input string to an integer if valid*/
+    
+    printf("\n\n");
+
+    readparagraph(fileName, 39, 43);
+    roll_dice(language);
+    readLine(fileName, 46);
+    printf("\n");
+
     readLine(fileName, 47);
     printf("\n");
     readparagraph(fileName, 48, 51);
     paper_scissors_stone(fileName);
 
+    sleep(1);
     readparagraph(fileName, 69, 72);
     enigma(fileName);
+    sleep(2.5);
     readparagraph(fileName, 79, 93);
 }
 
 void chap3(char *fileName, char *language, character player)
 {
-    int key;
-
     printf("\n%s", player.name);
     readparagraph(fileName, 1, 4);
 
-    snprintf(fileName, 13, "%s/chap2.txt", language); /*Change the file*/
-    FILE *file = fopen(fileName, "r");
-    readLine(fileName, 13);
-    scanf("%d", key);
-    if (key == 1)
-    {
-        printf("\n");
-    }
-    
 }
 
 int main(int argc, char *argv[])

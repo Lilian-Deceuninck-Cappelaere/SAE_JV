@@ -10,7 +10,7 @@ In this second part, you will have to find all the materials, equipment to get t
 ********** New quest: Find the materials **********
 **********  New quest: Find equipments   **********
 **********  New quest: Restore the IUT.  **********
-Press key (1) to see the rest.
+Enter any number to see the rest.
 
 You have enough items to restore the tutorial room. 
 You’re using cables, computers, computer equipment and furniture from your stocks.
@@ -28,7 +28,7 @@ A lock enables you to open the drawers.
 You realize that you still have some spare keys. You try to unlock the drawers with the keys. 
 You find a book containing a directory with teacher’s names and their addresses.
 
-Press key (1) to see the rest.
+Enter any number to see the rest.
 
 
 
@@ -75,7 +75,7 @@ Pronouncing me breaks me
 Find !
 
 Clue : Shhh
-
+It was silence!
 After numerous efforts, your friends and you rebuilt every single computer.
 
 ********** Achieved quest: find computer science Equipment **********
@@ -92,3 +92,5 @@ Congratulations! You’ve completed your mission.
 Thanks to the directory, you contact the teachers. 
 After numerous letters, you’ve reassembled the entire teaching team!
 
+(If user enters something else than a number)
+Please enter a number.

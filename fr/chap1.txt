@@ -110,3 +110,9 @@ Félicitations, vous avez réussi à ouvrir le coffre-fort !
 
 Vous trouvez une clé…
 (Fin du chapitre 1)
+
+(Si le joueur visite une deuxième fois la pièce)
+Vous avez déjà visité cette pièce.
+
+(Si l'utilisateur entre une lettre au lieu d'une valeure numérique)
+Veuillez entrer une valeure numérique.

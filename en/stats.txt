@@ -1,0 +1,4 @@
+**** Your statistics ****
+	Name : AM
+	Health points : 58
+	Tools attack  : 3

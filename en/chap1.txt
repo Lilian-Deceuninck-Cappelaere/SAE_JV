@@ -110,3 +110,9 @@ Congratulations, you have managed to open the safe!
 
 You find a key…
 (End of first chapter)
+
+(If a room has already been visited:)
+You've already been into this room.
+
+(If user enters a alphabetic caracters instead of numeric vavlue)
+Please enter numeric value only.
