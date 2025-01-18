@@ -1,4 +1,4 @@
 **** Vos statistiques ****
-	Nom : 1
-	Points de vie : 51
+	Nom : e
+	Points de vie : 60
 	Points d'attaque outils : 3

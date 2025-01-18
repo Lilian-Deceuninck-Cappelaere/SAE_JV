@@ -32,7 +32,7 @@ char* strlwr(char *str)
     char *tmp = str;
     while (*tmp)
     {
-        *tmp = tolower((char)*tmp);         /*Convert*/
+        *tmp = tolower((char)*tmp);         /*Convert string in lowercase caracters*/
         tmp++;
     }
     return str;
@@ -258,18 +258,18 @@ void paper_scissors_stone(char *fileName)
 {
     int choice, winp, winl, looter;
 
-    winp = 0;
-    winl = 0;
+    winp = 0;/*number of rounds won by player*/
+    winl = 0;/*number of rounds won by looter*/
     
     printf("\n");
 
     do
     {
         readparagraph(fileName, 53, 56);
-        scanf("%d", &choice);
+        scanf("%d", &choice);/*user's choice*/
         looter = Randomnum(1, 3);
 
-        if (choice == looter)
+        if (choice == looter)/*In case of tie*/
         {
             readLine(fileName, 58);
         }
