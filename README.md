@@ -1,17 +1,20 @@
-Created by Lilian Deceuninck Cappelaere and Antoine Molinaro
+# Created by Lilian Deceuninck Cappelaere and Antoine Molinaro
+## Video games made in the first year of BUT informatique 
+#### In the context of a (Learning and Evaluation situation).
 
-IUT: The Apocalypse Aftermath
+
+### IUT: The Apocalypse Aftermath
 
 The games features a postapocalyptic background. The leaders want to rebuilt the destroyed city. As a former student of IUT, you're missionned to rebuilt it. During this process, you will face multiple challenges, traps and zombies...
 
-Challenge :
+### Challenge :
 - random elements with the rand function
 - Manage keystrokes errors with strlwr from ctype.h library.
 - Possibility to save with writing in a file
 - Combat system with random attack value
 - riddle, mystery number, paper scissors stone
 
-Library :
+### Library :
 stdio.h     /*For viewing*/
 stdlib.h    /*For file*/
 ctype.h     /*For pass string in lowercase*/
@@ -20,7 +23,7 @@ time.h      /*For time*/
 stdbool.h   /*For boolean*/
 unistd.h    /*For stop temporary execution*/
 
-How to use our code ?
+### How to use our code ?
 
 First you need to compilate it using gcc : gcc IUT_The_Apocalypse_Aftermath.c -o IUT_The_Apocalypse_Aftermath.exe
 
